@@ -1,4 +1,25 @@
 services:
+  app:
+    image: asptech-web:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://asptech:${POSTGRES_PASSWORD:-change-me}@postgres:5432/asptech?schema=public
+      AUTH_SECRET: ${AUTH_SECRET:-generate-a-long-random-secret}
+      AUTH_TRUST_HOST: "true"
+      AUTH_GOOGLE_ID: ${AUTH_GOOGLE_ID:-}
+      AUTH_GOOGLE_SECRET: ${AUTH_GOOGLE_SECRET:-}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+    ports: ["3000:3000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    restart: unless-stopped
   postgres:
     image: postgres:17-alpine
     environment:
@@ -23,4 +44,3 @@ services:
 volumes:
   postgres_data:
   minio_data:
-

@@ -1,0 +1,16 @@
+.git
+.next
+node_modules
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env*.local
+Dockerfile
+compose.yaml
+README.md
+SRS_Website_ASPTech_v1.0.docx
+tsconfig.tsbuildinfo
+_tmp_*
+prisma/.tmp
