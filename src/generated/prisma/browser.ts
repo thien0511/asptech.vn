@@ -43,11 +43,6 @@ export type VerificationToken = Prisma.VerificationTokenModel
  */
 export type ProductGroup = Prisma.ProductGroupModel
 /**
- * Model Manufacturer
- * 
- */
-export type Manufacturer = Prisma.ManufacturerModel
-/**
  * Model PageVisit
  * 
  */

@@ -39,9 +39,8 @@ export default async function ProductAdminPage({ searchParams }: { searchParams:
       ? {
           OR: [
             { name: { contains: q, mode: "insensitive" } },
-            { model: { contains: q, mode: "insensitive" } },
-            { code: { contains: q, mode: "insensitive" } },
-            { supplierName: { contains: q, mode: "insensitive" } },
+            { description: { contains: q, mode: "insensitive" } },
+            { contactPerson: { contains: q, mode: "insensitive" } },
           ],
         }
       : {}),
@@ -53,7 +52,7 @@ export default async function ProductAdminPage({ searchParams }: { searchParams:
   const [products, groups, totals, visitStats] = await Promise.all([
     prisma.product.findMany({
       where,
-      include: { group: true, manufacturer: true },
+      include: { group: true },
       orderBy: [{ updatedAt: "desc" }],
       take: 150,
     }),
@@ -84,9 +83,6 @@ export default async function ProductAdminPage({ searchParams }: { searchParams:
               Thêm sản phẩm
             </Link>
           ) : null}
-          <Link href="/quan-tri/nha-san-xuat" className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-white">
-            Nhà sản xuất
-          </Link>
           <Link href="/quan-tri/nhom-san-pham" className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-white">
             Nhóm sản phẩm
           </Link>
@@ -98,7 +94,7 @@ export default async function ProductAdminPage({ searchParams }: { searchParams:
           <input
             name="q"
             defaultValue={q}
-            placeholder="Tên, model, code, nhà cung cấp"
+            placeholder="Tên, mô tả hoặc liên hệ"
             className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
           />
           <select name="status" defaultValue={status ?? ""} className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
@@ -124,7 +120,6 @@ export default async function ProductAdminPage({ searchParams }: { searchParams:
               <tr>
                 <th className="px-5 py-3">Sản phẩm</th>
                 <th className="px-5 py-3">Nhóm</th>
-                <th className="px-5 py-3">Hãng</th>
                 <th className="px-5 py-3">Trạng thái</th>
                 <th className="px-5 py-3">Hiển thị</th>
                 <th className="px-5 py-3">Thao tác</th>
@@ -135,10 +130,9 @@ export default async function ProductAdminPage({ searchParams }: { searchParams:
                 <tr key={product.id}>
                   <td className="px-5 py-4">
                     <div className="font-medium">{product.name}</div>
-                    <div className="text-slate-500">{product.model} · {product.code}</div>
+                    {product.contactPerson ? <div className="text-slate-500">Liên hệ: {product.contactPerson}</div> : null}
                   </td>
                   <td className="px-5 py-4">{product.group.name}</td>
-                  <td className="px-5 py-4">{product.manufacturer?.name ?? "—"}</td>
                   <td className="px-5 py-4">{contentStatusLabels[product.status]}</td>
                   <td className="px-5 py-4">{visibilityLabels[product.visibility]}</td>
                   <td className="px-5 py-4">

@@ -1,4 +1,4 @@
-"use server";
+﻿"use server";
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -17,25 +17,28 @@ const maxSpecificationUploadBytes = 5 * 1024 * 1024;
 
 const productFormSchema = z.object({
   id: z.string().min(1),
-  code: z.string().trim().min(1).max(120),
   name: z.string().trim().min(1).max(240),
-  model: z.string().trim().min(1).max(160),
-  summary: z.string().trim().min(1),
   description: z.string().trim().min(1),
+  contactPerson: z.string().trim().max(160).optional(),
   visibility: z.enum(visibilityOptions),
   groupId: z.string().min(1),
-  manufacturerId: z.string().min(1),
-  supplierName: z.string().trim().max(160).optional(),
-  contactPerson: z.string().trim().max(160).optional(),
-  sourceWebsite: z.string().trim().max(500).optional(),
-  sourceDocumentFolder: z.string().trim().max(500).optional(),
-  sourceImageSpecFolder: z.string().trim().max(500).optional(),
 });
 
 const createProductFormSchema = productFormSchema.omit({ id: true });
 
 function normalizeOptional(value?: string) {
   return value?.trim() || null;
+}
+
+function slugify(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/đ/g, "d")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
 }
 
 function productAssetDir(productId: string) {
@@ -101,6 +104,19 @@ async function getSpecificationsFromForm(formData: FormData) {
 
 function formatFileCounter(value: number) {
   return value.toString().padStart(2, "0");
+}
+
+async function uniqueProductSlug(name: string, existingProductId?: string) {
+  const base = slugify(name) || "san-pham";
+  let slug = base;
+  let counter = 2;
+
+  while (true) {
+    const existing = await prisma.product.findUnique({ where: { slug }, select: { id: true } });
+    if (!existing || existing.id === existingProductId) return slug;
+    slug = `${base}-${counter}`;
+    counter += 1;
+  }
 }
 
 async function saveUploadedImages(productId: string, files: File[]) {
@@ -194,30 +210,6 @@ async function deleteSelectedAssets(productId: string, assetIds: string[]) {
   return assets.length;
 }
 
-function slugify(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .toLowerCase()
-    .replace(/đ/g, "d")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/-{2,}/g, "-");
-}
-
-async function uniqueProductSlug(name: string, existingProductId?: string) {
-  const base = slugify(name) || "san-pham";
-  let slug = base;
-  let counter = 2;
-
-  while (true) {
-    const existing = await prisma.product.findUnique({ where: { slug }, select: { id: true } });
-    if (!existing || existing.id === existingProductId) return slug;
-    slug = `${base}-${counter}`;
-    counter += 1;
-  }
-}
-
 async function auditProductAction(actorId: string, action: string, productId: string, metadata?: Prisma.InputJsonValue) {
   await writeAuditEvent({
     actorId,
@@ -235,39 +227,23 @@ export async function createProductAction(formData: FormData) {
   }
 
   const parsed = createProductFormSchema.parse({
-    code: formData.get("code"),
     name: formData.get("name"),
-    model: formData.get("model"),
-    summary: formData.get("summary"),
     description: formData.get("description"),
+    contactPerson: formData.get("contactPerson") || undefined,
     visibility: formData.get("visibility"),
     groupId: formData.get("groupId"),
-    manufacturerId: formData.get("manufacturerId"),
-    supplierName: formData.get("supplierName") || undefined,
-    contactPerson: formData.get("contactPerson") || undefined,
-    sourceWebsite: formData.get("sourceWebsite") || undefined,
-    sourceDocumentFolder: formData.get("sourceDocumentFolder") || undefined,
-    sourceImageSpecFolder: formData.get("sourceImageSpecFolder") || undefined,
   });
 
   const product = await prisma.product.create({
     data: {
-      code: parsed.code,
       slug: await uniqueProductSlug(parsed.name),
       name: parsed.name,
-      model: parsed.model,
-      summary: parsed.summary,
       description: parsed.description,
+      contactPerson: normalizeOptional(parsed.contactPerson),
       status: ContentStatus.DRAFT,
       visibility: Visibility.INTERNAL,
       featured: false,
       groupId: parsed.groupId,
-      manufacturerId: parsed.manufacturerId,
-      supplierName: normalizeOptional(parsed.supplierName),
-      contactPerson: normalizeOptional(parsed.contactPerson),
-      sourceWebsite: normalizeOptional(parsed.sourceWebsite),
-      sourceDocumentFolder: normalizeOptional(parsed.sourceDocumentFolder),
-      sourceImageSpecFolder: normalizeOptional(parsed.sourceImageSpecFolder),
     },
   });
 
@@ -297,19 +273,11 @@ export async function updateProductAction(formData: FormData) {
 
   const parsed = productFormSchema.parse({
     id: formData.get("id"),
-    code: formData.get("code"),
     name: formData.get("name"),
-    model: formData.get("model"),
-    summary: formData.get("summary"),
     description: formData.get("description"),
+    contactPerson: formData.get("contactPerson") || undefined,
     visibility: formData.get("visibility"),
     groupId: formData.get("groupId"),
-    manufacturerId: formData.get("manufacturerId"),
-    supplierName: formData.get("supplierName") || undefined,
-    contactPerson: formData.get("contactPerson") || undefined,
-    sourceWebsite: formData.get("sourceWebsite") || undefined,
-    sourceDocumentFolder: formData.get("sourceDocumentFolder") || undefined,
-    sourceImageSpecFolder: formData.get("sourceImageSpecFolder") || undefined,
   });
 
   const before = await prisma.product.findUnique({ where: { id: parsed.id } });
@@ -318,20 +286,12 @@ export async function updateProductAction(formData: FormData) {
   const product = await prisma.product.update({
     where: { id: parsed.id },
     data: {
-      code: parsed.code,
       slug: await uniqueProductSlug(parsed.name, parsed.id),
       name: parsed.name,
-      model: parsed.model,
-      summary: parsed.summary,
       description: parsed.description,
+      contactPerson: normalizeOptional(parsed.contactPerson),
       visibility: parsed.visibility,
       groupId: parsed.groupId,
-      manufacturerId: parsed.manufacturerId,
-      supplierName: normalizeOptional(parsed.supplierName),
-      contactPerson: normalizeOptional(parsed.contactPerson),
-      sourceWebsite: normalizeOptional(parsed.sourceWebsite),
-      sourceDocumentFolder: normalizeOptional(parsed.sourceDocumentFolder),
-      sourceImageSpecFolder: normalizeOptional(parsed.sourceImageSpecFolder),
     },
   });
 

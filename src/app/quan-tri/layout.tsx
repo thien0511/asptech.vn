@@ -31,9 +31,6 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                   <Link href="/quan-tri/nhom-san-pham" className="font-medium text-blue-700">
                     Nhóm sản phẩm
                   </Link>
-                  <Link href="/quan-tri/nha-san-xuat" className="font-medium text-blue-700">
-                    Nhà sản xuất
-                  </Link>
                 </>
               ) : null}
               <SignOutButton className="font-medium text-slate-700 hover:text-red-700" />

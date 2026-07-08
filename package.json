@@ -11,8 +11,7 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
-    "products:import": "tsx prisma/import-products.ts",
-    "products:media:sync": "tsx prisma/sync-product-media.ts"
+    "products:import": "tsx prisma/import-products.ts"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.2",

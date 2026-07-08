@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
@@ -35,18 +35,16 @@ export default async function ProductAdminDetailPage({ params }: { params: Promi
   const canEdit = canEditProducts(user.role);
   const canApprove = canApproveProducts(user.role);
 
-  const [product, groups, manufacturers, auditEvents] = await Promise.all([
+  const [product, groups, auditEvents] = await Promise.all([
     prisma.product.findUnique({
       where: { id },
       include: {
         group: true,
-        manufacturer: true,
         assets: { orderBy: { fileName: "asc" } },
         specifications: { orderBy: { sortOrder: "asc" } },
       },
     }),
     prisma.productGroup.findMany({ orderBy: { name: "asc" } }),
-    prisma.manufacturer.findMany({ orderBy: { name: "asc" } }),
     prisma.auditEvent.findMany({
       where: { entity: "Product", entityId: id },
       orderBy: { createdAt: "desc" },
@@ -66,9 +64,7 @@ export default async function ProductAdminDetailPage({ params }: { params: Promi
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-start">
           <div>
             <h2 className="text-2xl font-bold">{product.name}</h2>
-            <p className="mt-1 text-sm text-slate-600">
-              {product.manufacturer?.name ?? "—"} · {product.model}
-            </p>
+            <p className="mt-1 text-sm text-slate-600">{product.group.name}</p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               <span className="rounded-full bg-amber-50 px-2 py-1 text-amber-800">{contentStatusLabels[product.status]}</span>
               <span className="rounded-full bg-slate-100 px-2 py-1 text-slate-700">{visibilityLabels[product.visibility]}</span>
@@ -88,103 +84,35 @@ export default async function ProductAdminDetailPage({ params }: { params: Promi
           <h3 className="text-lg font-semibold">Nội dung sản phẩm</h3>
           <form action={updateProductAction} className="mt-4 grid gap-4 md:grid-cols-2">
             <input type="hidden" name="id" value={product.id} />
-            <label className="text-sm font-medium">
-              Code
-              <input name="code" defaultValue={product.code} readOnly={!canEdit} className={fieldClass(!canEdit)} />
-            </label>
             <label className="text-sm font-medium md:col-span-2">
-              Tên
+              Tên sản phẩm
               <input name="name" defaultValue={product.name} readOnly={!canEdit} className={fieldClass(!canEdit)} />
-            </label>
-            <label className="text-sm font-medium">
-              Model
-              <input name="model" defaultValue={product.model} readOnly={!canEdit} className={fieldClass(!canEdit)} />
             </label>
             <label className="text-sm font-medium">
               Visibility
               <select name="visibility" defaultValue={product.visibility} disabled={!canEdit} className={fieldClass(!canEdit)}>
                 {visibilityOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {visibilityLabels[item]}
-                  </option>
+                  <option key={item} value={item}>{visibilityLabels[item]}</option>
                 ))}
               </select>
             </label>
             <label className="text-sm font-medium">
-              Nhóm
+              Nhóm sản phẩm
               <select name="groupId" defaultValue={product.groupId} disabled={!canEdit} className={fieldClass(!canEdit)}>
                 {groups.map((group) => (
-                  <option key={group.id} value={group.id}>
-                    {group.name}
-                  </option>
+                  <option key={group.id} value={group.id}>{group.name}</option>
                 ))}
               </select>
-            </label>
-            <label className="text-sm font-medium">
-              Nhà sản xuất
-              <select
-                name="manufacturerId"
-                defaultValue={product.manufacturerId ?? ""}
-                disabled={!canEdit}
-                className={fieldClass(!canEdit)}
-              >
-                {manufacturers.map((manufacturer) => (
-                  <option key={manufacturer.id} value={manufacturer.id}>
-                    {manufacturer.name}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="text-sm font-medium md:col-span-2">
-              Tóm tắt / thông số cơ bản
-              <textarea
-                name="summary"
-                defaultValue={product.summary}
-                readOnly={!canEdit}
-                rows={6}
-                className={fieldClass(!canEdit)}
-              />
             </label>
             <label className="text-sm font-medium md:col-span-2">
               Mô tả
-              <textarea
-                name="description"
-                defaultValue={product.description}
-                readOnly={!canEdit}
-                rows={8}
-                className={fieldClass(!canEdit)}
-              />
+              <textarea name="description" defaultValue={product.description} readOnly={!canEdit} rows={8} className={fieldClass(!canEdit)} />
             </label>
-            <label className="text-sm font-medium">
-              Nhà cung cấp
-              <input name="supplierName" defaultValue={product.supplierName ?? ""} readOnly={!canEdit} className={fieldClass(!canEdit)} />
-            </label>
-            <label className="text-sm font-medium">
+            <label className="text-sm font-medium md:col-span-2">
               Liên hệ
               <input name="contactPerson" defaultValue={product.contactPerson ?? ""} readOnly={!canEdit} className={fieldClass(!canEdit)} />
             </label>
-            <label className="text-sm font-medium md:col-span-2">
-              Website nguồn
-              <input name="sourceWebsite" defaultValue={product.sourceWebsite ?? ""} readOnly={!canEdit} className={fieldClass(!canEdit)} />
-            </label>
-            <label className="text-sm font-medium md:col-span-2">
-              Thư mục tài liệu
-              <input
-                name="sourceDocumentFolder"
-                defaultValue={product.sourceDocumentFolder ?? ""}
-                readOnly={!canEdit}
-                className={fieldClass(!canEdit)}
-              />
-            </label>
-            <label className="text-sm font-medium md:col-span-2">
-              Thư mục hình ảnh và thông số
-              <input
-                name="sourceImageSpecFolder"
-                defaultValue={product.sourceImageSpecFolder ?? ""}
-                readOnly={!canEdit}
-                className={fieldClass(!canEdit)}
-              />
-            </label>
+
             <div className="md:col-span-2">
               <div className="text-sm font-medium">Hình ảnh sản phẩm</div>
               {product.assets.length > 0 ? (
@@ -223,6 +151,7 @@ export default async function ProductAdminDetailPage({ params }: { params: Promi
                 </label>
               ) : null}
             </div>
+
             <label className="text-sm font-medium md:col-span-2">
               Thông số kỹ thuật
               {canEdit ? (
@@ -244,13 +173,14 @@ export default async function ProductAdminDetailPage({ params }: { params: Promi
                 defaultValue={formatSpecificationsText(product.specifications)}
                 readOnly={!canEdit}
                 rows={12}
-                placeholder={"Mỗi dòng một thông số, định dạng: Tên thông số | Giá trị"}
+                placeholder={"Mỗi dòng một thông số, định dạng: Tên thông số | Giá trị | Đơn vị"}
                 className={fieldClass(!canEdit)}
               />
               <span className="mt-1 block text-xs font-normal text-slate-500">
                 Nếu không upload Excel, danh sách thông số hiện tại sẽ được cập nhật theo nội dung ô này. Cột đơn vị là tùy chọn.
               </span>
             </label>
+
             {canEdit ? (
               <div className="md:col-span-2">
                 <button className="rounded-lg bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800">

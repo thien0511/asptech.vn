@@ -48,11 +48,10 @@ export default async function HomePage() {
   const signedInPath = defaultSignedInPath(session?.user?.role);
   const displayName = session?.user?.name || session?.user?.email || "tài khoản";
 
-  const [productCount, publishedPublicCount, groupCount, manufacturerCount, productGroups] = await Promise.all([
+  const [productCount, publishedPublicCount, groupCount, productGroups] = await Promise.all([
     prisma.product.count(),
     prisma.product.count({ where: { status: ContentStatus.PUBLISHED, visibility: Visibility.PUBLIC } }),
     prisma.productGroup.count(),
-    prisma.manufacturer.count(),
     isInternalUser
       ? prisma.productGroup.findMany({
           include: { _count: { select: { products: true } } },
@@ -169,8 +168,8 @@ export default async function HomePage() {
                       <div className="mt-1 text-xs text-slate-500">nhóm sản phẩm</div>
                     </div>
                     <div className="rounded-2xl bg-slate-50 p-4">
-                      <div className="text-2xl font-bold">{numberFormat(manufacturerCount)}</div>
-                      <div className="mt-1 text-xs text-slate-500">nhà sản xuất</div>
+                      <div className="text-2xl font-bold">{numberFormat(productCount)}</div>
+                      <div className="mt-1 text-xs text-slate-500">đang quản lý</div>
                     </div>
                     <div className="rounded-2xl bg-slate-50 p-4">
                       <div className="text-2xl font-bold">{numberFormat(publishedPublicCount)}</div>

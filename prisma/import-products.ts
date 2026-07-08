@@ -1,23 +1,13 @@
-import "dotenv/config";
+﻿import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient, ContentStatus, Visibility } from "../src/generated/prisma/client";
 
 type ProductImportRow = {
-  legacyExcelStt: number;
   name: string;
   description: string;
-  supplierName: string;
-  manufacturerName: string;
-  manufacturerCountry: string;
-  sourceDocumentFolder: string;
-  sourceWebsite: string;
-  sourceUpdatedAt: string;
-  model: string;
-  summary: string;
-  contactPerson: string;
+  contactPerson?: string;
   groupName: string;
-  sourceImageSpecFolder: string;
 };
 
 const databaseUrl = process.env.DATABASE_URL;
@@ -38,33 +28,14 @@ function slugify(value: string) {
     .replace(/-{2,}/g, "-");
 }
 
-function parseDate(value: string | null | undefined) {
-  if (!value) return null;
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return null;
-  return date;
-}
-
 async function uniqueSlug(base: string, existingProductId?: string) {
-  let slug = base;
+  let slug = base || "san-pham";
   let counter = 2;
 
   while (true) {
     const existing = await prisma.product.findUnique({ where: { slug }, select: { id: true } });
     if (!existing || existing.id === existingProductId) return slug;
-    slug = `${base}-${counter}`;
-    counter += 1;
-  }
-}
-
-async function uniqueCode(base: string, existingProductId?: string) {
-  let code = base;
-  let counter = 2;
-
-  while (true) {
-    const existing = await prisma.product.findUnique({ where: { code }, select: { id: true } });
-    if (!existing || existing.id === existingProductId) return code;
-    code = `${base}-${counter}`;
+    slug = `${base || "san-pham"}-${counter}`;
     counter += 1;
   }
 }
@@ -84,51 +55,24 @@ async function main() {
       create: { name: row.groupName, slug: groupSlug },
     });
 
-    const manufacturer = await prisma.manufacturer.upsert({
-      where: { name: row.manufacturerName },
-      update: {
-        country: row.manufacturerCountry,
-        website: row.sourceWebsite,
-      },
-      create: {
-        name: row.manufacturerName,
-        country: row.manufacturerCountry,
-        website: row.sourceWebsite,
-      },
-    });
-
     const existing = await prisma.product.findFirst({
       where: {
-        model: row.model,
-        manufacturerId: manufacturer.id,
+        name: row.name,
+        groupId: group.id,
       },
       select: { id: true },
     });
 
-    const slugBase = slugify(row.name);
-    const codeBase = slugify(row.model).toUpperCase();
-    const slug = await uniqueSlug(slugBase, existing?.id);
-    const code = await uniqueCode(codeBase, existing?.id);
-
+    const slug = await uniqueSlug(slugify(row.name), existing?.id);
     const data = {
-      code,
       slug,
       name: row.name,
-      model: row.model,
-      summary: row.summary,
       description: row.description,
-      supplierName: row.supplierName,
-      contactPerson: row.contactPerson,
-      sourceWebsite: row.sourceWebsite,
-      sourceDocumentFolder: row.sourceDocumentFolder,
-      sourceImageSpecFolder: row.sourceImageSpecFolder,
-      sourceUpdatedAt: parseDate(row.sourceUpdatedAt),
-      legacyExcelStt: Number(row.legacyExcelStt),
+      contactPerson: row.contactPerson?.trim() || null,
       status: ContentStatus.DRAFT,
       visibility: Visibility.INTERNAL,
       featured: false,
       groupId: group.id,
-      manufacturerId: manufacturer.id,
     };
 
     if (existing) {

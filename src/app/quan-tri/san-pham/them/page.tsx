@@ -22,10 +22,7 @@ export default async function CreateProductPage() {
     );
   }
 
-  const [groups, manufacturers] = await Promise.all([
-    prisma.productGroup.findMany({ orderBy: { name: "asc" } }),
-    prisma.manufacturer.findMany({ orderBy: { name: "asc" } }),
-  ]);
+  const groups = await prisma.productGroup.findMany({ orderBy: { name: "asc" } });
 
   return (
     <div className="space-y-6">
@@ -36,34 +33,34 @@ export default async function CreateProductPage() {
         <h2 className="text-2xl font-bold">Thêm sản phẩm</h2>
         <p className="mt-2 text-sm text-slate-600">Sản phẩm mới sẽ mặc định ở trạng thái Nháp / Nội bộ.</p>
         <form action={createProductAction} className="mt-6 grid gap-4 md:grid-cols-2">
-          <label className="text-sm font-medium">Code<input name="code" required className={inputClass()} /></label>
-          <label className="text-sm font-medium md:col-span-2">Tên<input name="name" required className={inputClass()} /></label>
-          <label className="text-sm font-medium">Model<input name="model" required className={inputClass()} /></label>
+          <label className="text-sm font-medium md:col-span-2">
+            Tên sản phẩm
+            <input name="name" required className={inputClass()} />
+          </label>
           <label className="text-sm font-medium">
             Visibility
             <select name="visibility" defaultValue={Visibility.INTERNAL} className={inputClass()}>
-              {visibilityOptions.map((item) => <option key={item} value={item}>{visibilityLabels[item]}</option>)}
+              {visibilityOptions.map((item) => (
+                <option key={item} value={item}>{visibilityLabels[item]}</option>
+              ))}
             </select>
           </label>
           <label className="text-sm font-medium">
-            Nhóm
+            Nhóm sản phẩm
             <select name="groupId" required className={inputClass()}>
-              {groups.map((group) => <option key={group.id} value={group.id}>{group.name}</option>)}
+              {groups.map((group) => (
+                <option key={group.id} value={group.id}>{group.name}</option>
+              ))}
             </select>
           </label>
-          <label className="text-sm font-medium">
-            Nhà sản xuất
-            <select name="manufacturerId" required className={inputClass()}>
-              {manufacturers.map((manufacturer) => <option key={manufacturer.id} value={manufacturer.id}>{manufacturer.name}</option>)}
-            </select>
+          <label className="text-sm font-medium md:col-span-2">
+            Mô tả
+            <textarea name="description" required rows={8} className={inputClass()} />
           </label>
-          <label className="text-sm font-medium md:col-span-2">Tóm tắt / thông số cơ bản<textarea name="summary" required rows={5} className={inputClass()} /></label>
-          <label className="text-sm font-medium md:col-span-2">Mô tả<textarea name="description" required rows={8} className={inputClass()} /></label>
-          <label className="text-sm font-medium">Nhà cung cấp<input name="supplierName" className={inputClass()} /></label>
-          <label className="text-sm font-medium">Liên hệ<input name="contactPerson" className={inputClass()} /></label>
-          <label className="text-sm font-medium md:col-span-2">Website nguồn<input name="sourceWebsite" className={inputClass()} /></label>
-          <label className="text-sm font-medium md:col-span-2">Thư mục tài liệu<input name="sourceDocumentFolder" className={inputClass()} /></label>
-          <label className="text-sm font-medium md:col-span-2">Thư mục hình ảnh và thông số<input name="sourceImageSpecFolder" className={inputClass()} /></label>
+          <label className="text-sm font-medium md:col-span-2">
+            Liên hệ
+            <input name="contactPerson" className={inputClass()} />
+          </label>
           <label className="text-sm font-medium md:col-span-2">
             Hình ảnh sản phẩm
             <input name="images" type="file" accept="image/png,image/jpeg,image/webp" multiple className={inputClass()} />

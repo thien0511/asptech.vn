@@ -389,7 +389,6 @@ export const ModelName = {
   Session: 'Session',
   VerificationToken: 'VerificationToken',
   ProductGroup: 'ProductGroup',
-  Manufacturer: 'Manufacturer',
   PageVisit: 'PageVisit',
   Product: 'Product',
   Specification: 'Specification',
@@ -410,7 +409,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "account" | "session" | "verificationToken" | "productGroup" | "manufacturer" | "pageVisit" | "product" | "specification" | "asset" | "auditEvent"
+    modelProps: "user" | "account" | "session" | "verificationToken" | "productGroup" | "pageVisit" | "product" | "specification" | "asset" | "auditEvent"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -781,80 +780,6 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         count: {
           args: Prisma.ProductGroupCountArgs<ExtArgs>
           result: runtime.Types.Utils.Optional<Prisma.ProductGroupCountAggregateOutputType> | number
-        }
-      }
-    }
-    Manufacturer: {
-      payload: Prisma.$ManufacturerPayload<ExtArgs>
-      fields: Prisma.ManufacturerFieldRefs
-      operations: {
-        findUnique: {
-          args: Prisma.ManufacturerFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload> | null
-        }
-        findUniqueOrThrow: {
-          args: Prisma.ManufacturerFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>
-        }
-        findFirst: {
-          args: Prisma.ManufacturerFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload> | null
-        }
-        findFirstOrThrow: {
-          args: Prisma.ManufacturerFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>
-        }
-        findMany: {
-          args: Prisma.ManufacturerFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>[]
-        }
-        create: {
-          args: Prisma.ManufacturerCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>
-        }
-        createMany: {
-          args: Prisma.ManufacturerCreateManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        createManyAndReturn: {
-          args: Prisma.ManufacturerCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>[]
-        }
-        delete: {
-          args: Prisma.ManufacturerDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>
-        }
-        update: {
-          args: Prisma.ManufacturerUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>
-        }
-        deleteMany: {
-          args: Prisma.ManufacturerDeleteManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        updateMany: {
-          args: Prisma.ManufacturerUpdateManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        updateManyAndReturn: {
-          args: Prisma.ManufacturerUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>[]
-        }
-        upsert: {
-          args: Prisma.ManufacturerUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ManufacturerPayload>
-        }
-        aggregate: {
-          args: Prisma.ManufacturerAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateManufacturer>
-        }
-        groupBy: {
-          args: Prisma.ManufacturerGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.ManufacturerGroupByOutputType>[]
-        }
-        count: {
-          args: Prisma.ManufacturerCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.ManufacturerCountAggregateOutputType> | number
         }
       }
     }
@@ -1333,16 +1258,6 @@ export const ProductGroupScalarFieldEnum = {
 export type ProductGroupScalarFieldEnum = (typeof ProductGroupScalarFieldEnum)[keyof typeof ProductGroupScalarFieldEnum]
 
 
-export const ManufacturerScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
-  country: 'country',
-  website: 'website'
-} as const
-
-export type ManufacturerScalarFieldEnum = (typeof ManufacturerScalarFieldEnum)[keyof typeof ManufacturerScalarFieldEnum]
-
-
 export const PageVisitScalarFieldEnum = {
   id: 'id',
   path: 'path',
@@ -1356,24 +1271,14 @@ export type PageVisitScalarFieldEnum = (typeof PageVisitScalarFieldEnum)[keyof t
 
 export const ProductScalarFieldEnum = {
   id: 'id',
-  code: 'code',
   slug: 'slug',
   name: 'name',
-  model: 'model',
-  summary: 'summary',
   description: 'description',
-  supplierName: 'supplierName',
   contactPerson: 'contactPerson',
-  sourceWebsite: 'sourceWebsite',
-  sourceDocumentFolder: 'sourceDocumentFolder',
-  sourceImageSpecFolder: 'sourceImageSpecFolder',
-  sourceUpdatedAt: 'sourceUpdatedAt',
-  legacyExcelStt: 'legacyExcelStt',
   status: 'status',
   visibility: 'visibility',
   featured: 'featured',
   groupId: 'groupId',
-  manufacturerId: 'manufacturerId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
@@ -1718,7 +1623,6 @@ export type GlobalOmitConfig = {
   session?: Prisma.SessionOmit
   verificationToken?: Prisma.VerificationTokenOmit
   productGroup?: Prisma.ProductGroupOmit
-  manufacturer?: Prisma.ManufacturerOmit
   pageVisit?: Prisma.PageVisitOmit
   product?: Prisma.ProductOmit
   specification?: Prisma.SpecificationOmit

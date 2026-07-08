@@ -56,7 +56,6 @@ export const ModelName = {
   Session: 'Session',
   VerificationToken: 'VerificationToken',
   ProductGroup: 'ProductGroup',
-  Manufacturer: 'Manufacturer',
   PageVisit: 'PageVisit',
   Product: 'Product',
   Specification: 'Specification',
@@ -146,16 +145,6 @@ export const ProductGroupScalarFieldEnum = {
 export type ProductGroupScalarFieldEnum = (typeof ProductGroupScalarFieldEnum)[keyof typeof ProductGroupScalarFieldEnum]
 
 
-export const ManufacturerScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
-  country: 'country',
-  website: 'website'
-} as const
-
-export type ManufacturerScalarFieldEnum = (typeof ManufacturerScalarFieldEnum)[keyof typeof ManufacturerScalarFieldEnum]
-
-
 export const PageVisitScalarFieldEnum = {
   id: 'id',
   path: 'path',
@@ -169,24 +158,14 @@ export type PageVisitScalarFieldEnum = (typeof PageVisitScalarFieldEnum)[keyof t
 
 export const ProductScalarFieldEnum = {
   id: 'id',
-  code: 'code',
   slug: 'slug',
   name: 'name',
-  model: 'model',
-  summary: 'summary',
   description: 'description',
-  supplierName: 'supplierName',
   contactPerson: 'contactPerson',
-  sourceWebsite: 'sourceWebsite',
-  sourceDocumentFolder: 'sourceDocumentFolder',
-  sourceImageSpecFolder: 'sourceImageSpecFolder',
-  sourceUpdatedAt: 'sourceUpdatedAt',
-  legacyExcelStt: 'legacyExcelStt',
   status: 'status',
   visibility: 'visibility',
   featured: 'featured',
   groupId: 'groupId',
-  manufacturerId: 'manufacturerId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const

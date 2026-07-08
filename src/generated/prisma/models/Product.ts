@@ -20,170 +20,92 @@ export type ProductModel = runtime.Types.Result.DefaultSelection<Prisma.$Product
 
 export type AggregateProduct = {
   _count: ProductCountAggregateOutputType | null
-  _avg: ProductAvgAggregateOutputType | null
-  _sum: ProductSumAggregateOutputType | null
   _min: ProductMinAggregateOutputType | null
   _max: ProductMaxAggregateOutputType | null
 }
 
-export type ProductAvgAggregateOutputType = {
-  legacyExcelStt: number | null
-}
-
-export type ProductSumAggregateOutputType = {
-  legacyExcelStt: number | null
-}
-
 export type ProductMinAggregateOutputType = {
   id: string | null
-  code: string | null
   slug: string | null
   name: string | null
-  model: string | null
-  summary: string | null
   description: string | null
-  supplierName: string | null
   contactPerson: string | null
-  sourceWebsite: string | null
-  sourceDocumentFolder: string | null
-  sourceImageSpecFolder: string | null
-  sourceUpdatedAt: Date | null
-  legacyExcelStt: number | null
   status: $Enums.ContentStatus | null
   visibility: $Enums.Visibility | null
   featured: boolean | null
   groupId: string | null
-  manufacturerId: string | null
   createdAt: Date | null
   updatedAt: Date | null
 }
 
 export type ProductMaxAggregateOutputType = {
   id: string | null
-  code: string | null
   slug: string | null
   name: string | null
-  model: string | null
-  summary: string | null
   description: string | null
-  supplierName: string | null
   contactPerson: string | null
-  sourceWebsite: string | null
-  sourceDocumentFolder: string | null
-  sourceImageSpecFolder: string | null
-  sourceUpdatedAt: Date | null
-  legacyExcelStt: number | null
   status: $Enums.ContentStatus | null
   visibility: $Enums.Visibility | null
   featured: boolean | null
   groupId: string | null
-  manufacturerId: string | null
   createdAt: Date | null
   updatedAt: Date | null
 }
 
 export type ProductCountAggregateOutputType = {
   id: number
-  code: number
   slug: number
   name: number
-  model: number
-  summary: number
   description: number
-  supplierName: number
   contactPerson: number
-  sourceWebsite: number
-  sourceDocumentFolder: number
-  sourceImageSpecFolder: number
-  sourceUpdatedAt: number
-  legacyExcelStt: number
   status: number
   visibility: number
   featured: number
   groupId: number
-  manufacturerId: number
   createdAt: number
   updatedAt: number
   _all: number
 }
 
 
-export type ProductAvgAggregateInputType = {
-  legacyExcelStt?: true
-}
-
-export type ProductSumAggregateInputType = {
-  legacyExcelStt?: true
-}
-
 export type ProductMinAggregateInputType = {
   id?: true
-  code?: true
   slug?: true
   name?: true
-  model?: true
-  summary?: true
   description?: true
-  supplierName?: true
   contactPerson?: true
-  sourceWebsite?: true
-  sourceDocumentFolder?: true
-  sourceImageSpecFolder?: true
-  sourceUpdatedAt?: true
-  legacyExcelStt?: true
   status?: true
   visibility?: true
   featured?: true
   groupId?: true
-  manufacturerId?: true
   createdAt?: true
   updatedAt?: true
 }
 
 export type ProductMaxAggregateInputType = {
   id?: true
-  code?: true
   slug?: true
   name?: true
-  model?: true
-  summary?: true
   description?: true
-  supplierName?: true
   contactPerson?: true
-  sourceWebsite?: true
-  sourceDocumentFolder?: true
-  sourceImageSpecFolder?: true
-  sourceUpdatedAt?: true
-  legacyExcelStt?: true
   status?: true
   visibility?: true
   featured?: true
   groupId?: true
-  manufacturerId?: true
   createdAt?: true
   updatedAt?: true
 }
 
 export type ProductCountAggregateInputType = {
   id?: true
-  code?: true
   slug?: true
   name?: true
-  model?: true
-  summary?: true
   description?: true
-  supplierName?: true
   contactPerson?: true
-  sourceWebsite?: true
-  sourceDocumentFolder?: true
-  sourceImageSpecFolder?: true
-  sourceUpdatedAt?: true
-  legacyExcelStt?: true
   status?: true
   visibility?: true
   featured?: true
   groupId?: true
-  manufacturerId?: true
   createdAt?: true
   updatedAt?: true
   _all?: true
@@ -227,18 +149,6 @@ export type ProductAggregateArgs<ExtArgs extends runtime.Types.Extensions.Intern
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
-   * Select which fields to average
-  **/
-  _avg?: ProductAvgAggregateInputType
-  /**
-   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-   * 
-   * Select which fields to sum
-  **/
-  _sum?: ProductSumAggregateInputType
-  /**
-   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-   * 
    * Select which fields to find the minimum value
   **/
   _min?: ProductMinAggregateInputType
@@ -269,37 +179,23 @@ export type ProductGroupByArgs<ExtArgs extends runtime.Types.Extensions.Internal
   take?: number
   skip?: number
   _count?: ProductCountAggregateInputType | true
-  _avg?: ProductAvgAggregateInputType
-  _sum?: ProductSumAggregateInputType
   _min?: ProductMinAggregateInputType
   _max?: ProductMaxAggregateInputType
 }
 
 export type ProductGroupByOutputType = {
   id: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName: string | null
   contactPerson: string | null
-  sourceWebsite: string | null
-  sourceDocumentFolder: string | null
-  sourceImageSpecFolder: string | null
-  sourceUpdatedAt: Date | null
-  legacyExcelStt: number | null
   status: $Enums.ContentStatus
   visibility: $Enums.Visibility
   featured: boolean
   groupId: string
-  manufacturerId: string | null
   createdAt: Date
   updatedAt: Date
   _count: ProductCountAggregateOutputType | null
-  _avg: ProductAvgAggregateOutputType | null
-  _sum: ProductSumAggregateOutputType | null
   _min: ProductMinAggregateOutputType | null
   _max: ProductMaxAggregateOutputType | null
 }
@@ -324,119 +220,73 @@ export type ProductWhereInput = {
   OR?: Prisma.ProductWhereInput[]
   NOT?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
   id?: Prisma.StringFilter<"Product"> | string
-  code?: Prisma.StringFilter<"Product"> | string
   slug?: Prisma.StringFilter<"Product"> | string
   name?: Prisma.StringFilter<"Product"> | string
-  model?: Prisma.StringFilter<"Product"> | string
-  summary?: Prisma.StringFilter<"Product"> | string
   description?: Prisma.StringFilter<"Product"> | string
-  supplierName?: Prisma.StringNullableFilter<"Product"> | string | null
   contactPerson?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceWebsite?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceDocumentFolder?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceImageSpecFolder?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceUpdatedAt?: Prisma.DateTimeNullableFilter<"Product"> | Date | string | null
-  legacyExcelStt?: Prisma.IntNullableFilter<"Product"> | number | null
   status?: Prisma.EnumContentStatusFilter<"Product"> | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFilter<"Product"> | $Enums.Visibility
   featured?: Prisma.BoolFilter<"Product"> | boolean
   groupId?: Prisma.StringFilter<"Product"> | string
-  manufacturerId?: Prisma.StringNullableFilter<"Product"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
   group?: Prisma.XOR<Prisma.ProductGroupScalarRelationFilter, Prisma.ProductGroupWhereInput>
-  manufacturer?: Prisma.XOR<Prisma.ManufacturerNullableScalarRelationFilter, Prisma.ManufacturerWhereInput> | null
   specifications?: Prisma.SpecificationListRelationFilter
   assets?: Prisma.AssetListRelationFilter
 }
 
 export type ProductOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  model?: Prisma.SortOrder
-  summary?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  supplierName?: Prisma.SortOrderInput | Prisma.SortOrder
   contactPerson?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceWebsite?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceDocumentFolder?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceImageSpecFolder?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceUpdatedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  legacyExcelStt?: Prisma.SortOrderInput | Prisma.SortOrder
   status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   featured?: Prisma.SortOrder
   groupId?: Prisma.SortOrder
-  manufacturerId?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   group?: Prisma.ProductGroupOrderByWithRelationInput
-  manufacturer?: Prisma.ManufacturerOrderByWithRelationInput
   specifications?: Prisma.SpecificationOrderByRelationAggregateInput
   assets?: Prisma.AssetOrderByRelationAggregateInput
 }
 
 export type ProductWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  code?: string
   slug?: string
-  model_manufacturerId?: Prisma.ProductModelManufacturerIdCompoundUniqueInput
   AND?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
   OR?: Prisma.ProductWhereInput[]
   NOT?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
   name?: Prisma.StringFilter<"Product"> | string
-  model?: Prisma.StringFilter<"Product"> | string
-  summary?: Prisma.StringFilter<"Product"> | string
   description?: Prisma.StringFilter<"Product"> | string
-  supplierName?: Prisma.StringNullableFilter<"Product"> | string | null
   contactPerson?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceWebsite?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceDocumentFolder?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceImageSpecFolder?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceUpdatedAt?: Prisma.DateTimeNullableFilter<"Product"> | Date | string | null
-  legacyExcelStt?: Prisma.IntNullableFilter<"Product"> | number | null
   status?: Prisma.EnumContentStatusFilter<"Product"> | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFilter<"Product"> | $Enums.Visibility
   featured?: Prisma.BoolFilter<"Product"> | boolean
   groupId?: Prisma.StringFilter<"Product"> | string
-  manufacturerId?: Prisma.StringNullableFilter<"Product"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
   group?: Prisma.XOR<Prisma.ProductGroupScalarRelationFilter, Prisma.ProductGroupWhereInput>
-  manufacturer?: Prisma.XOR<Prisma.ManufacturerNullableScalarRelationFilter, Prisma.ManufacturerWhereInput> | null
   specifications?: Prisma.SpecificationListRelationFilter
   assets?: Prisma.AssetListRelationFilter
-}, "id" | "code" | "slug" | "model_manufacturerId">
+}, "id" | "slug">
 
 export type ProductOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  model?: Prisma.SortOrder
-  summary?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  supplierName?: Prisma.SortOrderInput | Prisma.SortOrder
   contactPerson?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceWebsite?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceDocumentFolder?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceImageSpecFolder?: Prisma.SortOrderInput | Prisma.SortOrder
-  sourceUpdatedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  legacyExcelStt?: Prisma.SortOrderInput | Prisma.SortOrder
   status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   featured?: Prisma.SortOrder
   groupId?: Prisma.SortOrder
-  manufacturerId?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   _count?: Prisma.ProductCountOrderByAggregateInput
-  _avg?: Prisma.ProductAvgOrderByAggregateInput
   _max?: Prisma.ProductMaxOrderByAggregateInput
   _min?: Prisma.ProductMinOrderByAggregateInput
-  _sum?: Prisma.ProductSumOrderByAggregateInput
 }
 
 export type ProductScalarWhereWithAggregatesInput = {
@@ -444,74 +294,44 @@ export type ProductScalarWhereWithAggregatesInput = {
   OR?: Prisma.ProductScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ProductScalarWhereWithAggregatesInput | Prisma.ProductScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  code?: Prisma.StringWithAggregatesFilter<"Product"> | string
   slug?: Prisma.StringWithAggregatesFilter<"Product"> | string
   name?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  model?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  summary?: Prisma.StringWithAggregatesFilter<"Product"> | string
   description?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  supplierName?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
   contactPerson?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  sourceWebsite?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  sourceDocumentFolder?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  sourceImageSpecFolder?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  sourceUpdatedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Product"> | Date | string | null
-  legacyExcelStt?: Prisma.IntNullableWithAggregatesFilter<"Product"> | number | null
   status?: Prisma.EnumContentStatusWithAggregatesFilter<"Product"> | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityWithAggregatesFilter<"Product"> | $Enums.Visibility
   featured?: Prisma.BoolWithAggregatesFilter<"Product"> | boolean
   groupId?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  manufacturerId?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Product"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Product"> | Date | string
 }
 
 export type ProductCreateInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   group: Prisma.ProductGroupCreateNestedOneWithoutProductsInput
-  manufacturer?: Prisma.ManufacturerCreateNestedOneWithoutProductsInput
   specifications?: Prisma.SpecificationCreateNestedManyWithoutProductInput
   assets?: Prisma.AssetCreateNestedManyWithoutProductInput
 }
 
 export type ProductUncheckedCreateInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   groupId: string
-  manufacturerId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   specifications?: Prisma.SpecificationUncheckedCreateNestedManyWithoutProductInput
@@ -520,50 +340,30 @@ export type ProductUncheckedCreateInput = {
 
 export type ProductUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   group?: Prisma.ProductGroupUpdateOneRequiredWithoutProductsNestedInput
-  manufacturer?: Prisma.ManufacturerUpdateOneWithoutProductsNestedInput
   specifications?: Prisma.SpecificationUpdateManyWithoutProductNestedInput
   assets?: Prisma.AssetUpdateManyWithoutProductNestedInput
 }
 
 export type ProductUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   groupId?: Prisma.StringFieldUpdateOperationsInput | string
-  manufacturerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   specifications?: Prisma.SpecificationUncheckedUpdateManyWithoutProductNestedInput
@@ -572,43 +372,24 @@ export type ProductUncheckedUpdateInput = {
 
 export type ProductCreateManyInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   groupId: string
-  manufacturerId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
 }
 
 export type ProductUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -618,24 +399,14 @@ export type ProductUpdateManyMutationInput = {
 
 export type ProductUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   groupId?: Prisma.StringFieldUpdateOperationsInput | string
-  manufacturerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -650,89 +421,46 @@ export type ProductOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
 }
 
-export type ProductModelManufacturerIdCompoundUniqueInput = {
-  model: string
-  manufacturerId: string
-}
-
 export type ProductCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  model?: Prisma.SortOrder
-  summary?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  supplierName?: Prisma.SortOrder
   contactPerson?: Prisma.SortOrder
-  sourceWebsite?: Prisma.SortOrder
-  sourceDocumentFolder?: Prisma.SortOrder
-  sourceImageSpecFolder?: Prisma.SortOrder
-  sourceUpdatedAt?: Prisma.SortOrder
-  legacyExcelStt?: Prisma.SortOrder
   status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   featured?: Prisma.SortOrder
   groupId?: Prisma.SortOrder
-  manufacturerId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
 
-export type ProductAvgOrderByAggregateInput = {
-  legacyExcelStt?: Prisma.SortOrder
-}
-
 export type ProductMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  model?: Prisma.SortOrder
-  summary?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  supplierName?: Prisma.SortOrder
   contactPerson?: Prisma.SortOrder
-  sourceWebsite?: Prisma.SortOrder
-  sourceDocumentFolder?: Prisma.SortOrder
-  sourceImageSpecFolder?: Prisma.SortOrder
-  sourceUpdatedAt?: Prisma.SortOrder
-  legacyExcelStt?: Prisma.SortOrder
   status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   featured?: Prisma.SortOrder
   groupId?: Prisma.SortOrder
-  manufacturerId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
 
 export type ProductMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  code?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   name?: Prisma.SortOrder
-  model?: Prisma.SortOrder
-  summary?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  supplierName?: Prisma.SortOrder
   contactPerson?: Prisma.SortOrder
-  sourceWebsite?: Prisma.SortOrder
-  sourceDocumentFolder?: Prisma.SortOrder
-  sourceImageSpecFolder?: Prisma.SortOrder
-  sourceUpdatedAt?: Prisma.SortOrder
-  legacyExcelStt?: Prisma.SortOrder
   status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   featured?: Prisma.SortOrder
   groupId?: Prisma.SortOrder
-  manufacturerId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-}
-
-export type ProductSumOrderByAggregateInput = {
-  legacyExcelStt?: Prisma.SortOrder
 }
 
 export type ProductScalarRelationFilter = {
@@ -782,48 +510,6 @@ export type ProductUncheckedUpdateManyWithoutGroupNestedInput = {
   deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
 }
 
-export type ProductCreateNestedManyWithoutManufacturerInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutManufacturerInput, Prisma.ProductUncheckedCreateWithoutManufacturerInput> | Prisma.ProductCreateWithoutManufacturerInput[] | Prisma.ProductUncheckedCreateWithoutManufacturerInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutManufacturerInput | Prisma.ProductCreateOrConnectWithoutManufacturerInput[]
-  createMany?: Prisma.ProductCreateManyManufacturerInputEnvelope
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-}
-
-export type ProductUncheckedCreateNestedManyWithoutManufacturerInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutManufacturerInput, Prisma.ProductUncheckedCreateWithoutManufacturerInput> | Prisma.ProductCreateWithoutManufacturerInput[] | Prisma.ProductUncheckedCreateWithoutManufacturerInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutManufacturerInput | Prisma.ProductCreateOrConnectWithoutManufacturerInput[]
-  createMany?: Prisma.ProductCreateManyManufacturerInputEnvelope
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-}
-
-export type ProductUpdateManyWithoutManufacturerNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutManufacturerInput, Prisma.ProductUncheckedCreateWithoutManufacturerInput> | Prisma.ProductCreateWithoutManufacturerInput[] | Prisma.ProductUncheckedCreateWithoutManufacturerInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutManufacturerInput | Prisma.ProductCreateOrConnectWithoutManufacturerInput[]
-  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutManufacturerInput | Prisma.ProductUpsertWithWhereUniqueWithoutManufacturerInput[]
-  createMany?: Prisma.ProductCreateManyManufacturerInputEnvelope
-  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  update?: Prisma.ProductUpdateWithWhereUniqueWithoutManufacturerInput | Prisma.ProductUpdateWithWhereUniqueWithoutManufacturerInput[]
-  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutManufacturerInput | Prisma.ProductUpdateManyWithWhereWithoutManufacturerInput[]
-  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-}
-
-export type ProductUncheckedUpdateManyWithoutManufacturerNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutManufacturerInput, Prisma.ProductUncheckedCreateWithoutManufacturerInput> | Prisma.ProductCreateWithoutManufacturerInput[] | Prisma.ProductUncheckedCreateWithoutManufacturerInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutManufacturerInput | Prisma.ProductCreateOrConnectWithoutManufacturerInput[]
-  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutManufacturerInput | Prisma.ProductUpsertWithWhereUniqueWithoutManufacturerInput[]
-  createMany?: Prisma.ProductCreateManyManufacturerInputEnvelope
-  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  update?: Prisma.ProductUpdateWithWhereUniqueWithoutManufacturerInput | Prisma.ProductUpdateWithWhereUniqueWithoutManufacturerInput[]
-  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutManufacturerInput | Prisma.ProductUpdateManyWithWhereWithoutManufacturerInput[]
-  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-}
-
 export type EnumContentStatusFieldUpdateOperationsInput = {
   set?: $Enums.ContentStatus
 }
@@ -862,48 +548,28 @@ export type ProductUpdateOneRequiredWithoutAssetsNestedInput = {
 
 export type ProductCreateWithoutGroupInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
-  manufacturer?: Prisma.ManufacturerCreateNestedOneWithoutProductsInput
   specifications?: Prisma.SpecificationCreateNestedManyWithoutProductInput
   assets?: Prisma.AssetCreateNestedManyWithoutProductInput
 }
 
 export type ProductUncheckedCreateWithoutGroupInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
-  manufacturerId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   specifications?: Prisma.SpecificationUncheckedCreateNestedManyWithoutProductInput
@@ -941,149 +607,43 @@ export type ProductScalarWhereInput = {
   OR?: Prisma.ProductScalarWhereInput[]
   NOT?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
   id?: Prisma.StringFilter<"Product"> | string
-  code?: Prisma.StringFilter<"Product"> | string
   slug?: Prisma.StringFilter<"Product"> | string
   name?: Prisma.StringFilter<"Product"> | string
-  model?: Prisma.StringFilter<"Product"> | string
-  summary?: Prisma.StringFilter<"Product"> | string
   description?: Prisma.StringFilter<"Product"> | string
-  supplierName?: Prisma.StringNullableFilter<"Product"> | string | null
   contactPerson?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceWebsite?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceDocumentFolder?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceImageSpecFolder?: Prisma.StringNullableFilter<"Product"> | string | null
-  sourceUpdatedAt?: Prisma.DateTimeNullableFilter<"Product"> | Date | string | null
-  legacyExcelStt?: Prisma.IntNullableFilter<"Product"> | number | null
   status?: Prisma.EnumContentStatusFilter<"Product"> | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFilter<"Product"> | $Enums.Visibility
   featured?: Prisma.BoolFilter<"Product"> | boolean
   groupId?: Prisma.StringFilter<"Product"> | string
-  manufacturerId?: Prisma.StringNullableFilter<"Product"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
 }
 
-export type ProductCreateWithoutManufacturerInput = {
-  id?: string
-  code: string
-  slug: string
-  name: string
-  model: string
-  summary: string
-  description: string
-  supplierName?: string | null
-  contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
-  status?: $Enums.ContentStatus
-  visibility?: $Enums.Visibility
-  featured?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  group: Prisma.ProductGroupCreateNestedOneWithoutProductsInput
-  specifications?: Prisma.SpecificationCreateNestedManyWithoutProductInput
-  assets?: Prisma.AssetCreateNestedManyWithoutProductInput
-}
-
-export type ProductUncheckedCreateWithoutManufacturerInput = {
-  id?: string
-  code: string
-  slug: string
-  name: string
-  model: string
-  summary: string
-  description: string
-  supplierName?: string | null
-  contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
-  status?: $Enums.ContentStatus
-  visibility?: $Enums.Visibility
-  featured?: boolean
-  groupId: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  specifications?: Prisma.SpecificationUncheckedCreateNestedManyWithoutProductInput
-  assets?: Prisma.AssetUncheckedCreateNestedManyWithoutProductInput
-}
-
-export type ProductCreateOrConnectWithoutManufacturerInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutManufacturerInput, Prisma.ProductUncheckedCreateWithoutManufacturerInput>
-}
-
-export type ProductCreateManyManufacturerInputEnvelope = {
-  data: Prisma.ProductCreateManyManufacturerInput | Prisma.ProductCreateManyManufacturerInput[]
-  skipDuplicates?: boolean
-}
-
-export type ProductUpsertWithWhereUniqueWithoutManufacturerInput = {
-  where: Prisma.ProductWhereUniqueInput
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutManufacturerInput, Prisma.ProductUncheckedUpdateWithoutManufacturerInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutManufacturerInput, Prisma.ProductUncheckedCreateWithoutManufacturerInput>
-}
-
-export type ProductUpdateWithWhereUniqueWithoutManufacturerInput = {
-  where: Prisma.ProductWhereUniqueInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutManufacturerInput, Prisma.ProductUncheckedUpdateWithoutManufacturerInput>
-}
-
-export type ProductUpdateManyWithWhereWithoutManufacturerInput = {
-  where: Prisma.ProductScalarWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateManyMutationInput, Prisma.ProductUncheckedUpdateManyWithoutManufacturerInput>
-}
-
 export type ProductCreateWithoutSpecificationsInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   group: Prisma.ProductGroupCreateNestedOneWithoutProductsInput
-  manufacturer?: Prisma.ManufacturerCreateNestedOneWithoutProductsInput
   assets?: Prisma.AssetCreateNestedManyWithoutProductInput
 }
 
 export type ProductUncheckedCreateWithoutSpecificationsInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   groupId: string
-  manufacturerId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   assets?: Prisma.AssetUncheckedCreateNestedManyWithoutProductInput
@@ -1107,49 +667,29 @@ export type ProductUpdateToOneWithWhereWithoutSpecificationsInput = {
 
 export type ProductUpdateWithoutSpecificationsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   group?: Prisma.ProductGroupUpdateOneRequiredWithoutProductsNestedInput
-  manufacturer?: Prisma.ManufacturerUpdateOneWithoutProductsNestedInput
   assets?: Prisma.AssetUpdateManyWithoutProductNestedInput
 }
 
 export type ProductUncheckedUpdateWithoutSpecificationsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   groupId?: Prisma.StringFieldUpdateOperationsInput | string
-  manufacturerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   assets?: Prisma.AssetUncheckedUpdateManyWithoutProductNestedInput
@@ -1157,49 +697,29 @@ export type ProductUncheckedUpdateWithoutSpecificationsInput = {
 
 export type ProductCreateWithoutAssetsInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   group: Prisma.ProductGroupCreateNestedOneWithoutProductsInput
-  manufacturer?: Prisma.ManufacturerCreateNestedOneWithoutProductsInput
   specifications?: Prisma.SpecificationCreateNestedManyWithoutProductInput
 }
 
 export type ProductUncheckedCreateWithoutAssetsInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
   groupId: string
-  manufacturerId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   specifications?: Prisma.SpecificationUncheckedCreateNestedManyWithoutProductInput
@@ -1223,49 +743,29 @@ export type ProductUpdateToOneWithWhereWithoutAssetsInput = {
 
 export type ProductUpdateWithoutAssetsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   group?: Prisma.ProductGroupUpdateOneRequiredWithoutProductsNestedInput
-  manufacturer?: Prisma.ManufacturerUpdateOneWithoutProductsNestedInput
   specifications?: Prisma.SpecificationUpdateManyWithoutProductNestedInput
 }
 
 export type ProductUncheckedUpdateWithoutAssetsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   groupId?: Prisma.StringFieldUpdateOperationsInput | string
-  manufacturerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   specifications?: Prisma.SpecificationUncheckedUpdateManyWithoutProductNestedInput
@@ -1273,71 +773,41 @@ export type ProductUncheckedUpdateWithoutAssetsInput = {
 
 export type ProductCreateManyGroupInput = {
   id?: string
-  code: string
   slug: string
   name: string
-  model: string
-  summary: string
   description: string
-  supplierName?: string | null
   contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
   status?: $Enums.ContentStatus
   visibility?: $Enums.Visibility
   featured?: boolean
-  manufacturerId?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
 }
 
 export type ProductUpdateWithoutGroupInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  manufacturer?: Prisma.ManufacturerUpdateOneWithoutProductsNestedInput
   specifications?: Prisma.SpecificationUpdateManyWithoutProductNestedInput
   assets?: Prisma.AssetUpdateManyWithoutProductNestedInput
 }
 
 export type ProductUncheckedUpdateWithoutGroupInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  manufacturerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   specifications?: Prisma.SpecificationUncheckedUpdateManyWithoutProductNestedInput
@@ -1346,119 +816,13 @@ export type ProductUncheckedUpdateWithoutGroupInput = {
 
 export type ProductUncheckedUpdateManyWithoutGroupInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
   visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
   featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  manufacturerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-}
-
-export type ProductCreateManyManufacturerInput = {
-  id?: string
-  code: string
-  slug: string
-  name: string
-  model: string
-  summary: string
-  description: string
-  supplierName?: string | null
-  contactPerson?: string | null
-  sourceWebsite?: string | null
-  sourceDocumentFolder?: string | null
-  sourceImageSpecFolder?: string | null
-  sourceUpdatedAt?: Date | string | null
-  legacyExcelStt?: number | null
-  status?: $Enums.ContentStatus
-  visibility?: $Enums.Visibility
-  featured?: boolean
-  groupId: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-}
-
-export type ProductUpdateWithoutManufacturerInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
-  visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
-  featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  group?: Prisma.ProductGroupUpdateOneRequiredWithoutProductsNestedInput
-  specifications?: Prisma.SpecificationUpdateManyWithoutProductNestedInput
-  assets?: Prisma.AssetUpdateManyWithoutProductNestedInput
-}
-
-export type ProductUncheckedUpdateWithoutManufacturerInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
-  visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
-  featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  groupId?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  specifications?: Prisma.SpecificationUncheckedUpdateManyWithoutProductNestedInput
-  assets?: Prisma.AssetUncheckedUpdateManyWithoutProductNestedInput
-}
-
-export type ProductUncheckedUpdateManyWithoutManufacturerInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  code?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  model?: Prisma.StringFieldUpdateOperationsInput | string
-  summary?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  supplierName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  contactPerson?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceWebsite?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceDocumentFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceImageSpecFolder?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sourceUpdatedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  legacyExcelStt?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  status?: Prisma.EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
-  visibility?: Prisma.EnumVisibilityFieldUpdateOperationsInput | $Enums.Visibility
-  featured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  groupId?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -1505,28 +869,17 @@ export type ProductCountOutputTypeCountAssetsArgs<ExtArgs extends runtime.Types.
 
 export type ProductSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  code?: boolean
   slug?: boolean
   name?: boolean
-  model?: boolean
-  summary?: boolean
   description?: boolean
-  supplierName?: boolean
   contactPerson?: boolean
-  sourceWebsite?: boolean
-  sourceDocumentFolder?: boolean
-  sourceImageSpecFolder?: boolean
-  sourceUpdatedAt?: boolean
-  legacyExcelStt?: boolean
   status?: boolean
   visibility?: boolean
   featured?: boolean
   groupId?: boolean
-  manufacturerId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   group?: boolean | Prisma.ProductGroupDefaultArgs<ExtArgs>
-  manufacturer?: boolean | Prisma.Product$manufacturerArgs<ExtArgs>
   specifications?: boolean | Prisma.Product$specificationsArgs<ExtArgs>
   assets?: boolean | Prisma.Product$assetsArgs<ExtArgs>
   _count?: boolean | Prisma.ProductCountOutputTypeDefaultArgs<ExtArgs>
@@ -1534,125 +887,79 @@ export type ProductSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
 
 export type ProductSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  code?: boolean
   slug?: boolean
   name?: boolean
-  model?: boolean
-  summary?: boolean
   description?: boolean
-  supplierName?: boolean
   contactPerson?: boolean
-  sourceWebsite?: boolean
-  sourceDocumentFolder?: boolean
-  sourceImageSpecFolder?: boolean
-  sourceUpdatedAt?: boolean
-  legacyExcelStt?: boolean
   status?: boolean
   visibility?: boolean
   featured?: boolean
   groupId?: boolean
-  manufacturerId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   group?: boolean | Prisma.ProductGroupDefaultArgs<ExtArgs>
-  manufacturer?: boolean | Prisma.Product$manufacturerArgs<ExtArgs>
 }, ExtArgs["result"]["product"]>
 
 export type ProductSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  code?: boolean
   slug?: boolean
   name?: boolean
-  model?: boolean
-  summary?: boolean
   description?: boolean
-  supplierName?: boolean
   contactPerson?: boolean
-  sourceWebsite?: boolean
-  sourceDocumentFolder?: boolean
-  sourceImageSpecFolder?: boolean
-  sourceUpdatedAt?: boolean
-  legacyExcelStt?: boolean
   status?: boolean
   visibility?: boolean
   featured?: boolean
   groupId?: boolean
-  manufacturerId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   group?: boolean | Prisma.ProductGroupDefaultArgs<ExtArgs>
-  manufacturer?: boolean | Prisma.Product$manufacturerArgs<ExtArgs>
 }, ExtArgs["result"]["product"]>
 
 export type ProductSelectScalar = {
   id?: boolean
-  code?: boolean
   slug?: boolean
   name?: boolean
-  model?: boolean
-  summary?: boolean
   description?: boolean
-  supplierName?: boolean
   contactPerson?: boolean
-  sourceWebsite?: boolean
-  sourceDocumentFolder?: boolean
-  sourceImageSpecFolder?: boolean
-  sourceUpdatedAt?: boolean
-  legacyExcelStt?: boolean
   status?: boolean
   visibility?: boolean
   featured?: boolean
   groupId?: boolean
-  manufacturerId?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type ProductOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "code" | "slug" | "name" | "model" | "summary" | "description" | "supplierName" | "contactPerson" | "sourceWebsite" | "sourceDocumentFolder" | "sourceImageSpecFolder" | "sourceUpdatedAt" | "legacyExcelStt" | "status" | "visibility" | "featured" | "groupId" | "manufacturerId" | "createdAt" | "updatedAt", ExtArgs["result"]["product"]>
+export type ProductOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "slug" | "name" | "description" | "contactPerson" | "status" | "visibility" | "featured" | "groupId" | "createdAt" | "updatedAt", ExtArgs["result"]["product"]>
 export type ProductInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   group?: boolean | Prisma.ProductGroupDefaultArgs<ExtArgs>
-  manufacturer?: boolean | Prisma.Product$manufacturerArgs<ExtArgs>
   specifications?: boolean | Prisma.Product$specificationsArgs<ExtArgs>
   assets?: boolean | Prisma.Product$assetsArgs<ExtArgs>
   _count?: boolean | Prisma.ProductCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type ProductIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   group?: boolean | Prisma.ProductGroupDefaultArgs<ExtArgs>
-  manufacturer?: boolean | Prisma.Product$manufacturerArgs<ExtArgs>
 }
 export type ProductIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   group?: boolean | Prisma.ProductGroupDefaultArgs<ExtArgs>
-  manufacturer?: boolean | Prisma.Product$manufacturerArgs<ExtArgs>
 }
 
 export type $ProductPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Product"
   objects: {
     group: Prisma.$ProductGroupPayload<ExtArgs>
-    manufacturer: Prisma.$ManufacturerPayload<ExtArgs> | null
     specifications: Prisma.$SpecificationPayload<ExtArgs>[]
     assets: Prisma.$AssetPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    code: string
     slug: string
     name: string
-    model: string
-    summary: string
     description: string
-    supplierName: string | null
     contactPerson: string | null
-    sourceWebsite: string | null
-    sourceDocumentFolder: string | null
-    sourceImageSpecFolder: string | null
-    sourceUpdatedAt: Date | null
-    legacyExcelStt: number | null
     status: $Enums.ContentStatus
     visibility: $Enums.Visibility
     featured: boolean
     groupId: string
-    manufacturerId: string | null
     createdAt: Date
     updatedAt: Date
   }, ExtArgs["result"]["product"]>
@@ -2050,7 +1357,6 @@ readonly fields: ProductFieldRefs;
 export interface Prisma__ProductClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   group<T extends Prisma.ProductGroupDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ProductGroupDefaultArgs<ExtArgs>>): Prisma.Prisma__ProductGroupClient<runtime.Types.Result.GetResult<Prisma.$ProductGroupPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  manufacturer<T extends Prisma.Product$manufacturerArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Product$manufacturerArgs<ExtArgs>>): Prisma.Prisma__ManufacturerClient<runtime.Types.Result.GetResult<Prisma.$ManufacturerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   specifications<T extends Prisma.Product$specificationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Product$specificationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SpecificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   assets<T extends Prisma.Product$assetsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Product$assetsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AssetPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -2083,24 +1389,14 @@ export interface Prisma__ProductClient<T, Null = never, ExtArgs extends runtime.
  */
 export interface ProductFieldRefs {
   readonly id: Prisma.FieldRef<"Product", 'String'>
-  readonly code: Prisma.FieldRef<"Product", 'String'>
   readonly slug: Prisma.FieldRef<"Product", 'String'>
   readonly name: Prisma.FieldRef<"Product", 'String'>
-  readonly model: Prisma.FieldRef<"Product", 'String'>
-  readonly summary: Prisma.FieldRef<"Product", 'String'>
   readonly description: Prisma.FieldRef<"Product", 'String'>
-  readonly supplierName: Prisma.FieldRef<"Product", 'String'>
   readonly contactPerson: Prisma.FieldRef<"Product", 'String'>
-  readonly sourceWebsite: Prisma.FieldRef<"Product", 'String'>
-  readonly sourceDocumentFolder: Prisma.FieldRef<"Product", 'String'>
-  readonly sourceImageSpecFolder: Prisma.FieldRef<"Product", 'String'>
-  readonly sourceUpdatedAt: Prisma.FieldRef<"Product", 'DateTime'>
-  readonly legacyExcelStt: Prisma.FieldRef<"Product", 'Int'>
   readonly status: Prisma.FieldRef<"Product", 'ContentStatus'>
   readonly visibility: Prisma.FieldRef<"Product", 'Visibility'>
   readonly featured: Prisma.FieldRef<"Product", 'Boolean'>
   readonly groupId: Prisma.FieldRef<"Product", 'String'>
-  readonly manufacturerId: Prisma.FieldRef<"Product", 'String'>
   readonly createdAt: Prisma.FieldRef<"Product", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Product", 'DateTime'>
 }
@@ -2501,25 +1797,6 @@ export type ProductDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
    * Limit how many Products to delete.
    */
   limit?: number
-}
-
-/**
- * Product.manufacturer
- */
-export type Product$manufacturerArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Manufacturer
-   */
-  select?: Prisma.ManufacturerSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Manufacturer
-   */
-  omit?: Prisma.ManufacturerOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.ManufacturerInclude<ExtArgs> | null
-  where?: Prisma.ManufacturerWhereInput
 }
 
 /**
