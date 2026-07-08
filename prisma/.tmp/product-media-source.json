@@ -1,0 +1,830 @@
+[
+  {
+    "id": "cmra1ag8q0008hsuk97mr34e6",
+    "slug": "ban-tron-am-thanh-nho-gon-tich-hop-bo-xu-ly-hieu-ung",
+    "name": "Bàn trộn âm thanh nhỏ gọn tích hợp bộ xử lý hiệu ứng",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\Âm thanh hội thảo\\M12-PFX"
+  },
+  {
+    "id": "cmra1ahi7007thsukpemb8vax",
+    "slug": "bo-camera-sieu-nho-va-phu-kien-giam-sat-bi-mat",
+    "name": "Bộ camera siêu nhỏ và phụ kiện giám sát bí mật",
+    "sourceImageSpecFolder": "AVTEK\\Covidence AS\\CCTV\\Oculus NxtGen Camera - Accessories"
+  },
+  {
+    "id": "cmra1ahzw00anhsuk78bay5ou",
+    "slug": "bo-dung-cu-pha-cua-va-tiep-can-thu-cong",
+    "name": "Bộ dụng cụ phá cửa và tiếp cận thủ công",
+    "sourceImageSpecFolder": "AVTEK\\Ruhl Inc\\Dụng cụ phá cửa và tiếp cận thủ công\\ALTI"
+  },
+  {
+    "id": "cmra1ahp2008zhsukdqqsm2lt",
+    "slug": "bo-giam-sat-am-thanh-hinh-anh-nguy-trang-trong-dien-thoai-thong-minh",
+    "name": "Bộ giám sát âm thanh/hình ảnh ngụy trang trong điện thoại thông minh",
+    "sourceImageSpecFolder": "HTC\\PRO4SEC\\Bộ giám sát âm thanh hình ảnh ngụy trang trong điện thoại thông minh\\Strix 2"
+  },
+  {
+    "id": "cmra1ag6n0002hsukf2fvwkna",
+    "slug": "bo-khuech-dai-tron-cong-suat-500-w",
+    "name": "Bộ khuếch đại trộn công suất 500 W",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\Âm thanh hội thảo\\PAM-500"
+  },
+  {
+    "id": "cmra1ahth009nhsuke400rzyt",
+    "slug": "bo-mo-khoa-xe-su-dung-chia-khoa-thong-minh",
+    "name": "Bộ mở khóa xe sử dụng chìa khóa thông minh",
+    "sourceImageSpecFolder": "HTI\\Secupro Government BV\\Bộ mở khóa xe sử dụng chìa khóa thông minh\\Smart Key"
+  },
+  {
+    "id": "cmra1ai0v00athsuk5haozb57",
+    "slug": "bo-tai-nghe-lien-lac-chien-thuat",
+    "name": "Bộ tai nghe liên lạc chiến thuật",
+    "sourceImageSpecFolder": "AVTEK\\TacticalHeadsets\\Tai nghe liên lạc chiến thuật\\M11 Pro System"
+  },
+  {
+    "id": "cmra1ahwa00a2hsuk4kcqcser",
+    "slug": "bo-thiet-bi-phong-thi-nghiem-phap-chung-co-dong",
+    "name": "Bộ thiết bị phòng thí nghiệm pháp chứng cơ động",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Forensic\\LES-Basic"
+  },
+  {
+    "id": "cmra1ahv6009whsukegj5ou9u",
+    "slug": "bo-thu-nhanh-ma-tuy-tai-hien-truong",
+    "name": "Bộ thử nhanh ma túy tại hiện trường",
+    "sourceImageSpecFolder": "ASP Tech\\DetectaChem\\Thiết bị phân tích cầm tay\\MobileDetect"
+  },
+  {
+    "id": "cmra1ai0e00aqhsuk142m1pai",
+    "slug": "bo-trang-bi-du-day-chien-thuat-va-tiep-can-tren-cao",
+    "name": "Bộ trang bị đu dây chiến thuật và tiếp cận trên cao",
+    "sourceImageSpecFolder": "AVTEK\\TAR\\Thiết bị đu dây và tiếp cận chiến thuật\\OMER 1"
+  },
+  {
+    "id": "cmra1ag9h000bhsuk0eff8ci9",
+    "slug": "bo-xu-ly-am-thanh-so-ma-tran-4-vao-4-ra",
+    "name": "Bộ xử lý âm thanh số ma trận 4 vào 4 ra",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\Âm thanh hội thảo\\MP-0404"
+  },
+  {
+    "id": "cmra1agz6004bhsuk4weufl1p",
+    "slug": "bo-dam-cam-tay-phuc-vu-lien-lac-bi-mat",
+    "name": "Bộ đàm cầm tay phục vụ liên lạc bí mật",
+    "sourceImageSpecFolder": "ASP Tech\\Motorola Solutions\\Bộ đàm cầm tay phục vụ liên lạc bí mật\\APX 3000"
+  },
+  {
+    "id": "cmra1ahz000ahhsukfajq46sk",
+    "slug": "bo-do-lan-chien-thuat-ban-kho-3-mm",
+    "name": "Bộ đồ lặn chiến thuật bán khô 3 mm",
+    "sourceImageSpecFolder": "AVTEK\\OPENSAFETY\\Trang bị chiến thuật và bảo hộ cho thợ lặn\\Wetsuit Set"
+  },
+  {
+    "id": "cmra1agbc000khsukkl2sbcoj",
+    "slug": "camera-ip-bullet-ai-hong-ngoai-5-mp",
+    "name": "Camera IP Bullet AI hồng ngoại 5 MP",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\CCTV\\SA-AB4030D-WD27"
+  },
+  {
+    "id": "cmra1agbw000nhsuk6ihydbxl",
+    "slug": "camera-ip-dome-starlight-hong-ngoai-5-mp",
+    "name": "Camera IP Dome Starlight hồng ngoại 5 MP",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\CCTV\\SA-AD4030D-WD27"
+  },
+  {
+    "id": "cmra1agar000hhsukf6xq3626",
+    "slug": "camera-ip-speed-dome-hong-ngoai-4k",
+    "name": "Camera IP Speed Dome hồng ngoại 4K",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\CCTV\\SA-R8030D-Z31"
+  },
+  {
+    "id": "cmra1agge001hhsuk4rjo6zrn",
+    "slug": "camera-ptz-ip-quang-nhiet-hai-kenh-4k",
+    "name": "Camera PTZ IP quang – nhiệt hai kênh 4K",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\Camera PTZ IP quang – nhiệt tầm xa\\SA-ZN8030-W50H"
+  },
+  {
+    "id": "cmra1agfz001ehsukj98cxfk1",
+    "slug": "camera-ptz-ip-quang-nhiet-tam-xa-tich-hop-laser",
+    "name": "Camera PTZ IP quang – nhiệt tầm xa tích hợp laser",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\Camera PTZ IP quang – nhiệt tầm xa\\SA-ZT2060-W60T10"
+  },
+  {
+    "id": "cmra1agdf000whsukmfcgsmkg",
+    "slug": "camera-ptz-chiu-thoi-tiet-cho-trien-khai-bien-va-phuong-tien",
+    "name": "Camera PTZ chịu thời tiết cho triển khai biển và phương tiện",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Atlas"
+  },
+  {
+    "id": "cmra1agci000qhsukljrolw4p",
+    "slug": "camera-ptz-co-dong-nho-gon",
+    "name": "Camera PTZ cơ động nhỏ gọn",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Triton"
+  },
+  {
+    "id": "cmra1agf20018hsuk91hiht6i",
+    "slug": "camera-ptz-quang-dien-hong-ngoai-sieu-tam-xa",
+    "name": "Camera PTZ quang-điện/hồng ngoại siêu tầm xa",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Vega"
+  },
+  {
+    "id": "cmra1agdv000zhsukj74ndolk",
+    "slug": "camera-ptz-tam-xa-co-on-dinh-con-quay",
+    "name": "Camera PTZ tầm xa có ổn định con quay",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Neptune"
+  },
+  {
+    "id": "cmra1age90012hsukgyo7lsc8",
+    "slug": "camera-ptz-da-cam-bien-co-trung",
+    "name": "Camera PTZ đa cảm biến cỡ trung",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Sentry"
+  },
+  {
+    "id": "cmra1agfj001bhsukykhs8hzy",
+    "slug": "camera-ptz-da-cam-bien-sieu-tam-xa-cap-quan-su",
+    "name": "Camera PTZ đa cảm biến siêu tầm xa cấp quân sự",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Arc"
+  },
+  {
+    "id": "cmra1ageo0015hsuk6jbqwfea",
+    "slug": "camera-ptz-da-cam-bien-tam-xa-chiu-thoi-tiet",
+    "name": "Camera PTZ đa cảm biến tầm xa chịu thời tiết",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Sigma"
+  },
+  {
+    "id": "cmra1ahru009ehsukiuh2rorv",
+    "slug": "camera-quadvga-quang-hoc-co-dinh",
+    "name": "Camera QuadVGA quang học cố định",
+    "sourceImageSpecFolder": "HTI\\Innova S.p.A.\\Thiết bị lưu trữ ghi âm ghi hình và truyền dữ liệu qua mạng di động\\CM310"
+  },
+  {
+    "id": "cmra1ahqq0098hsukyaispgc5",
+    "slug": "camera-svga-dang-tru-nho",
+    "name": "Camera SVGA dạng trụ nhỏ",
+    "sourceImageSpecFolder": "HTI\\Innova S.p.A.\\Thiết bị lưu trữ ghi âm ghi hình và truyền dữ liệu qua mạng di động\\CM200"
+  },
+  {
+    "id": "cmra1ahrb009bhsuk6ariya2w",
+    "slug": "camera-svga-dang-vuong-nho",
+    "name": "Camera SVGA dạng vuông nhỏ",
+    "sourceImageSpecFolder": "HTI\\Innova S.p.A.\\Thiết bị lưu trữ ghi âm ghi hình và truyền dữ liệu qua mạng di động\\CM210"
+  },
+  {
+    "id": "cmra1agcz000thsukro4fan9r",
+    "slug": "camera-giam-sat-co-dong-da-cam-bien",
+    "name": "Camera giám sát cơ động đa cảm biến",
+    "sourceImageSpecFolder": "AVTEK\\Infiniti_Electro-Optics\\Camera_giam_sat_PTZ_quang_dien\\Rogue"
+  },
+  {
+    "id": "cmra1ahoj008whsuk90axlj0s",
+    "slug": "camera-ky-thuat-so-tam-xa",
+    "name": "Camera kỹ thuật số tầm xa",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Camera kỹ thuật số tầm xa\\LUMINAR"
+  },
+  {
+    "id": "cmra1aglu0028hsukm3tht92f",
+    "slug": "camera-nhan-dang-va-theo-doi-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Camera nhận dạng và theo dõi thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BC011"
+  },
+  {
+    "id": "cmra1ahsd009hhsukr5qusbs4",
+    "slug": "camera-sieu-nho-goc-nhin-rong",
+    "name": "Camera siêu nhỏ góc nhìn rộng",
+    "sourceImageSpecFolder": "HTI\\Innova S.p.A.\\Thiết bị lưu trữ ghi âm ghi hình và truyền dữ liệu qua mạng di động\\CM400 CM400-90"
+  },
+  {
+    "id": "cmra1aga4000ehsukykv13inl",
+    "slug": "dong-camera-ip-thong-minh",
+    "name": "Dòng camera IP thông minh",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Surveillance\\ISCD15X3-ISCM15X3-ISCP15X25"
+  },
+  {
+    "id": "cmra1ah380055hsukma6ueqb8",
+    "slug": "he-sinh-thai-so-bao-mat-ma-hoa-dau-cuoi",
+    "name": "Hệ sinh thái số bảo mật mã hóa đầu cuối",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\Trios Ecosystem"
+  },
+  {
+    "id": "cmra1ah9t006hhsuk21ezyryu",
+    "slug": "he-thong-radar-xuyen-tuong-chien-thuat-nho-gon",
+    "name": "Hệ thống RADAR xuyên tường chiến thuật nhỏ gọn",
+    "sourceImageSpecFolder": "HTI\\Camero-Tech Ltd.\\Radar xuyên tường\\XAVER 400D"
+  },
+  {
+    "id": "cmra1ah4t005hhsuk36fqlo7t",
+    "slug": "he-thong-bao-mat-thu-dien-tu",
+    "name": "Hệ thống bảo mật thư điện tử",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\TriMail"
+  },
+  {
+    "id": "cmra1agwa003qhsukpjytoeel",
+    "slug": "he-thong-bao-ve-can-cu-truoc-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Hệ thống bảo vệ căn cứ trước thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU004"
+  },
+  {
+    "id": "cmra1agve003khsukf2wteqbl",
+    "slug": "he-thong-chong-thiet-bi-bay-khong-nguoi-lai-su-dung-radar-ba-chieu",
+    "name": "Hệ thống chống thiết bị bay không người lái sử dụng radar ba chiều",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU002"
+  },
+  {
+    "id": "cmra1agvv003nhsukt0dbskv0",
+    "slug": "he-thong-chong-thiet-bi-bay-khong-nguoi-lai-thu-dong",
+    "name": "Hệ thống chống thiết bị bay không người lái thụ động",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU003"
+  },
+  {
+    "id": "cmra1agwq003thsuk0qasrvbz",
+    "slug": "he-thong-chong-thiet-bi-bay-khong-nguoi-lai-thu-dong-toan-bang-tan",
+    "name": "Hệ thống chống thiết bị bay không người lái thụ động toàn băng tần",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU005"
+  },
+  {
+    "id": "cmra1agx5003whsukcqc3fdgm",
+    "slug": "he-thong-chong-thiet-bi-bay-khong-nguoi-lai-tich-hop-tu-dong",
+    "name": "Hệ thống chống thiết bị bay không người lái tích hợp tự động",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU006"
+  },
+  {
+    "id": "cmra1agtw003bhsuk02qkngby",
+    "slug": "he-thong-cam-tay-chong-thiet-bi-bay-the-he-moi",
+    "name": "Hệ thống cầm tay chống thiết bị bay thế hệ mới",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BD005"
+  },
+  {
+    "id": "cmra1ahhj007qhsuk8ladd20r",
+    "slug": "he-thong-ghi-hinh-ip-sieu-nho-phuc-vu-giam-sat-bi-mat",
+    "name": "Hệ thống ghi hình IP siêu nhỏ phục vụ giám sát bí mật",
+    "sourceImageSpecFolder": "AVTEK\\Covidence AS\\CCTV\\Oculus NxtGen Wi-Fi"
+  },
+  {
+    "id": "cmra1agl60025hsukrt706msy",
+    "slug": "he-thong-giam-sat-va-phan-tich-mang-khong-day",
+    "name": "Hệ thống giám sát và phân tích mạng không dây",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-IM005"
+  },
+  {
+    "id": "cmra1aghh001nhsuk0w5eu3nm",
+    "slug": "he-thong-giam-sat-va-dinh-vi-nguoi-hang-hoa-khi-nhay-du",
+    "name": "Hệ thống giám sát và định vị người, hàng hóa khi nhảy dù",
+    "sourceImageSpecFolder": "AVTEK\\ONYX FINDER\\Hệ thống giám sát và định vị khi nhảy dù\\ONYX FINDER"
+  },
+  {
+    "id": "cmra1ahip007whsukhxgoh3nq",
+    "slug": "he-thong-giam-sat-am-thanh-ky-thuat-so-khong-day",
+    "name": "Hệ thống giám sát âm thanh kỹ thuật số không dây",
+    "sourceImageSpecFolder": "AVTEK\\FORSOLUTION CZ\\Thiết bị giám sát âm thanh\\DELTA"
+  },
+  {
+    "id": "cmra1ahd4006zhsukmaoioby9",
+    "slug": "he-thong-lien-lac-sieu-am-xuyen-nuoc-cho-hoat-dong-lan",
+    "name": "Hệ thống liên lạc siêu âm xuyên nước cho hoạt động lặn",
+    "sourceImageSpecFolder": "AVTEK\\OPENSAFETY\\Liên lạc dưới nước\\IMIL-WWSC IMIL-WWDC"
+  },
+  {
+    "id": "cmra1ah2f004zhsuk0epfyupl",
+    "slug": "he-thong-luu-tru-du-lieu-quy-mo-lon-va-xu-ly-thong-tin-bang-tri-tue-nhan-tao",
+    "name": "Hệ thống lưu trữ dữ liệu quy mô lớn và xử lý thông tin bằng trí tuệ nhân tạo",
+    "sourceImageSpecFolder": "ASP Tech\\ITSC\\Hệ thống lưu trữ dữ liệu quy mô lớn và xử lý thông tin bằng trí tuệ nhân tạo\\AI-BSP-PX1000"
+  },
+  {
+    "id": "cmra1ah00004hhsuki7p3of16",
+    "slug": "he-thong-may-bay-khong-nguoi-lai-cat-va-ha-canh-thang-dung-phuc-vu-trinh-sat-giam-sat",
+    "name": "Hệ thống máy bay không người lái cất và hạ cánh thẳng đứng phục vụ trinh sát, giám sát",
+    "sourceImageSpecFolder": "AVTEK\\TULPARS\\UAV\\TULPARS VTOL"
+  },
+  {
+    "id": "cmra1agyq0048hsuktvk6xt2d",
+    "slug": "he-thong-mang-ip-khong-day-chien-thuat",
+    "name": "Hệ thống mạng IP không dây chiến thuật",
+    "sourceImageSpecFolder": "AVTEK\\BITTIUM\\Mạng liên lạc chiến thuật\\TAC WIN"
+  },
+  {
+    "id": "cmra1agn3002ehsukv0ccvaot",
+    "slug": "he-thong-phat-hien-va-dinh-vi-thiet-bi-bay-toan-bang-tan",
+    "name": "Hệ thống phát hiện và định vị thiết bị bay toàn băng tần",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BR016"
+  },
+  {
+    "id": "cmra1aggv001khsukbooqyd8m",
+    "slug": "he-thong-phat-hien-va-dinh-vi-tieng-sung",
+    "name": "Hệ thống phát hiện và định vị tiếng súng",
+    "sourceImageSpecFolder": "AVTEK\\Triangula\\Định vị tiếng súng\\Triangula"
+  },
+  {
+    "id": "cmra1aguv003hhsuk5ppkgphu",
+    "slug": "he-thong-phat-hien-gay-nhieu-va-theo-doi-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Hệ thống phát hiện, gây nhiễu và theo dõi thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU001"
+  },
+  {
+    "id": "cmra1ah74005whsukvz1jn0z7",
+    "slug": "he-thong-phan-tich-video",
+    "name": "Hệ thống phân tích video",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Surveillance\\DISCOVERY-X DISCOVERY-M DISCOVERY-XS S-FACE"
+  },
+  {
+    "id": "cmra1ah5m005nhsukp3nc6h0g",
+    "slug": "he-thong-phan-tich-video-phuc-vu-dieu-tra",
+    "name": "Hệ thống phân tích video phục vụ điều tra",
+    "sourceImageSpecFolder": "AVTEK\\KINESENSE\\Phân tích Video\\Kinesense"
+  },
+  {
+    "id": "cmra1agxl003zhsukvlfidcbx",
+    "slug": "he-thong-phong-ve-tam-thap-da-cam-bien-va-da-phuong-thuc-doi-khang",
+    "name": "Hệ thống phòng vệ tầm thấp đa cảm biến và đa phương thức đối kháng",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BU008"
+  },
+  {
+    "id": "cmra1ah8d0065hsuke9gngxul",
+    "slug": "he-thong-radar-xuyen-tuong-phat-hien-nguoi",
+    "name": "Hệ thống radar xuyên tường phát hiện người",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-SV003"
+  },
+  {
+    "id": "cmra1ahle008bhsuk6zoccjjm",
+    "slug": "he-thong-radar-am-thanh-thong-minh-mot-cum",
+    "name": "Hệ thống radar âm thanh thông minh một cụm",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE SE3001"
+  },
+  {
+    "id": "cmra1ahlw008ehsukv6w1cmhe",
+    "slug": "he-thong-radar-am-thanh-thong-minh-da-cum-3-phan-tu",
+    "name": "Hệ thống radar âm thanh thông minh đa cụm 3 phần tử",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE SE3003"
+  },
+  {
+    "id": "cmra1ahmf008hhsukkhncx53x",
+    "slug": "he-thong-radar-am-thanh-thong-minh-da-cum-5-phan-tu",
+    "name": "Hệ thống radar âm thanh thông minh đa cụm 5 phần tử",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE SE3005"
+  },
+  {
+    "id": "cmra1ahmx008khsukwngj2vn9",
+    "slug": "he-thong-radar-am-thanh-thong-minh-da-cum-9-phan-tu",
+    "name": "Hệ thống radar âm thanh thông minh đa cụm 9 phần tử",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE SE3009"
+  },
+  {
+    "id": "cmra1ah7z0062hsuk3r3k1eve",
+    "slug": "he-thong-radar-dieu-khien-tu-xa-phat-hien-dau-hieu-su-song",
+    "name": "Hệ thống radar điều khiển từ xa phát hiện dấu hiệu sự sống",
+    "sourceImageSpecFolder": "ASP Tech\\SpecOps\\Thiết bị phát hiện sự sống\\MK4-100-00A1"
+  },
+  {
+    "id": "cmra1ahep0078hsukh67vzuez",
+    "slug": "he-thong-sonar-dinh-vi-va-lien-lac-danh-cho-tho-lan",
+    "name": "Hệ thống sonar, định vị và liên lạc dành cho thợ lặn",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\SONADIVE"
+  },
+  {
+    "id": "cmra1agug003ehsukgcqxud0x",
+    "slug": "he-thong-deo-lung-phat-hien-va-doi-khang-thiet-bi-bay-toan-bang-tan",
+    "name": "Hệ thống đeo lưng phát hiện và đối kháng thiết bị bay toàn băng tần",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BD006"
+  },
+  {
+    "id": "cmra1ahe90075hsukpdavqacq",
+    "slug": "he-thong-do-luong-va-kiem-tra-hieu-nang-sonar",
+    "name": "Hệ thống đo lường và kiểm tra hiệu năng sonar",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\SIERA"
+  },
+  {
+    "id": "cmra1ai1r00azhsukl76dxe23",
+    "slug": "kinh-ngam-dem-khuech-dai-anh-gan-vu-khi",
+    "name": "Kính ngắm đêm khuếch đại ảnh gắn vũ khí",
+    "sourceImageSpecFolder": "AVTEK\\Qioptiq Limited\\Kính ngắm gắn vũ khí\\MAXIKITE-1"
+  },
+  {
+    "id": "cmra1ai1a00awhsukknf9cgat",
+    "slug": "kinh-ngam-anh-nhiet-gan-thang-hang-cho-vu-khi",
+    "name": "Kính ngắm ảnh nhiệt gắn thẳng hàng cho vũ khí",
+    "sourceImageSpecFolder": "AVTEK\\Qioptiq Limited\\Kính ngắm gắn vũ khí\\DRAGON-S12"
+  },
+  {
+    "id": "cmra1ag7k0005hsuk5p5el5x5",
+    "slug": "loa-am-tran-dong-truc-40-w",
+    "name": "Loa âm trần đồng trục 40 W",
+    "sourceImageSpecFolder": "ASP Tech\\Starview Technologies\\Âm thanh hội thảo\\CS-40"
+  },
+  {
+    "id": "cmra1ah0f004khsukyw1sx4xo",
+    "slug": "may-bay-khong-nguoi-lai-co-bao-ve-canh-5-inch",
+    "name": "Máy bay không người lái có bảo vệ cánh 5 inch",
+    "sourceImageSpecFolder": "AVTEK\\Lumenier\\Máy bay không người lái FPV\\LightHawk Defender5"
+  },
+  {
+    "id": "cmra1ah1m004thsukvy34w5oi",
+    "slug": "may-bay-khong-nguoi-lai-nho-gon-cho-khong-gian-hep",
+    "name": "Máy bay không người lái nhỏ gọn cho không gian hẹp",
+    "sourceImageSpecFolder": "AVTEK\\Lumenier\\Máy bay không người lái FPV\\LightHawk Defender35"
+  },
+  {
+    "id": "cmra1ah17004qhsuk6rh7vd28",
+    "slug": "may-bay-khong-nguoi-lai-danh-chan-toc-do-cao-va-van-chuyen-tai-trong-chinh-xac",
+    "name": "Máy bay không người lái đánh chặn tốc độ cao và vận chuyển tải trọng chính xác",
+    "sourceImageSpecFolder": "AVTEK\\Lumenier\\Máy bay không người lái FPV\\NightHawk LithiX"
+  },
+  {
+    "id": "cmra1ahum009thsuk4cuhjf5d",
+    "slug": "may-nhan-dang-hoa-chat-cam-tay-bang-quang-pho-raman",
+    "name": "Máy nhận dạng hóa chất cầm tay bằng quang phổ Raman",
+    "sourceImageSpecFolder": "ASP Tech\\DetectaChem\\Thiết bị phân tích cầm tay\\APEX R7"
+  },
+  {
+    "id": "cmra1ahdm0072hsuk0u47t66k",
+    "slug": "muc-tieu-am-hoc-tu-hanh-phuc-vu-huan-luyen-chong-tau-ngam",
+    "name": "Mục tiêu âm học tự hành phục vụ huấn luyện chống tàu ngầm",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\SEMA"
+  },
+  {
+    "id": "cmra1ahvr009zhsukce9z1ppm",
+    "slug": "nguon-sang-tu-ngoai-phuc-vu-phap-chung",
+    "name": "Nguồn sáng tử ngoại phục vụ pháp chứng",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Forensic\\UVA Light Kit"
+  },
+  {
+    "id": "cmra1ah0u004nhsuk3zn6k83f",
+    "slug": "nen-tang-bay-nhiem-vu-mot-chieu-va-trinh-sat",
+    "name": "Nền tảng bay nhiệm vụ một chiều và trinh sát",
+    "sourceImageSpecFolder": "AVTEK\\Lumenier\\Máy bay không người lái FPV\\NightHawk AttriX"
+  },
+  {
+    "id": "cmra1ah3l0058hsukc8223p7z",
+    "slug": "nen-tang-bao-mat-loi-dung-chung",
+    "name": "Nền tảng bảo mật lõi dùng chung",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\TriBase"
+  },
+  {
+    "id": "cmra1ah2u0052hsuk5t0ldf3e",
+    "slug": "nen-tang-du-lieu-tich-hop-nghiep-vu-thong-minh",
+    "name": "Nền tảng dữ liệu tích hợp nghiệp vụ thông minh",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\UniData"
+  },
+  {
+    "id": "cmra1ah6q005thsukx5tprlu1",
+    "slug": "nen-tang-hau-xu-ly-am-thanh-bang-ai",
+    "name": "Nền tảng hậu xử lý âm thanh bằng AI",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE 4D Audio"
+  },
+  {
+    "id": "cmra1ahc9006thsukfmjqstha",
+    "slug": "phuong-tien-ngam-dieu-khien-tu-xa-da-nhiem",
+    "name": "Phương tiện ngầm điều khiển từ xa đa nhiệm",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-UR002"
+  },
+  {
+    "id": "cmra1ahfi007ehsuke3jf009v",
+    "slug": "phuong-tien-tu-hanh-duoi-nuoc-co-dong-phuc-vu-chong-min",
+    "name": "Phương tiện tự hành dưới nước cơ động phục vụ chống mìn",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\COMET-MCM"
+  },
+  {
+    "id": "cmra1ahfx007hhsuk5qm6erlh",
+    "slug": "phuong-tien-tu-hanh-duoi-nuoc-co-nho-da-nhiem",
+    "name": "Phương tiện tự hành dưới nước cỡ nhỏ đa nhiệm",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\NEMOSENS"
+  },
+  {
+    "id": "cmra1ahgc007khsukobcpiane",
+    "slug": "phuong-tien-tu-hanh-dinh-vi-va-chuyen-tiep-thong-tin-duoi-nuoc",
+    "name": "Phương tiện tự hành định vị và chuyển tiếp thông tin dưới nước",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\NEMOTRACK"
+  },
+  {
+    "id": "cmra1ah66005qhsukg23j9vfq",
+    "slug": "phan-mem-ban-do-3d-thoi-gian-thuc-tich-hop-ai-nhung",
+    "name": "Phần mềm bản đồ 3D thời gian thực tích hợp AI nhúng",
+    "sourceImageSpecFolder": "AVTEK\\Tyndall FX\\Phần mềm bản đồ 3D và AI\\Terramind FX"
+  },
+  {
+    "id": "cmra1ags60032hsuk1mj0ou3o",
+    "slug": "radar-doppler-xung-ba-chieu-da-muc-tieu",
+    "name": "Radar Doppler xung ba chiều đa mục tiêu",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BR022"
+  },
+  {
+    "id": "cmra1agrn002zhsuk7qnn2jq0",
+    "slug": "radar-mang-pha-giam-sat-muc-tieu-tam-thap",
+    "name": "Radar mảng pha giám sát mục tiêu tầm thấp",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BR014"
+  },
+  {
+    "id": "cmra1agr3002whsuk9dgxhe9j",
+    "slug": "radar-phat-hien-muc-tieu-bay-co-dien-tich-phan-xa-nho",
+    "name": "Radar phát hiện mục tiêu bay có diện tích phản xạ nhỏ",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BR001"
+  },
+  {
+    "id": "cmra1ah8r0068hsuk7h83iwss",
+    "slug": "radar-xuyen-tuong-co-dong-tang-cuong-bao-ve",
+    "name": "Radar xuyên tường cơ động tăng cường bảo vệ",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-SV004"
+  },
+  {
+    "id": "cmra1ah9f006ehsukzdaniyfo",
+    "slug": "radar-xuyen-tuong-co-dong-dinh-vi-ba-chieu",
+    "name": "Radar xuyên tường cơ động định vị ba chiều",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-SV009"
+  },
+  {
+    "id": "cmra1ah93006bhsukk2tnqzhl",
+    "slug": "radar-xuyen-tuong-cam-tay-dinh-vi-hai-chieu",
+    "name": "Radar xuyên tường cầm tay định vị hai chiều",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-SV007"
+  },
+  {
+    "id": "cmra1ahal006khsukqbbh3uct",
+    "slug": "robot-bon-chan-trinh-sat-chua-chay-va-cuu-ho",
+    "name": "Robot bốn chân trinh sát chữa cháy và cứu hộ",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-IR001"
+  },
+  {
+    "id": "cmra1ahbb006nhsukbtwmfuuc",
+    "slug": "robot-chua-chay-co-dong-trong-khong-gian-han-che",
+    "name": "Robot chữa cháy cơ động trong không gian hạn chế",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-IR002"
+  },
+  {
+    "id": "cmra1ahco006whsuk9g4zdzm0",
+    "slug": "robot-trinh-sat-co-nho-co-the-nem",
+    "name": "Robot trinh sát cỡ nhỏ có thể ném",
+    "sourceImageSpecFolder": "ASP Tech\\ReconRobotics\\Robot trinh sát chiến thuật\\Throwbot 2 Robot"
+  },
+  {
+    "id": "cmra1ahbr006qhsuk1zdy76lb",
+    "slug": "robot-xu-ly-vat-lieu-no-va-trinh-sat-dia-hinh",
+    "name": "Robot xử lý vật liệu nổ và trinh sát địa hình",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-IR003"
+  },
+  {
+    "id": "cmra1ai4h00bhhsukywxq2l26",
+    "slug": "sung-ban-dien-khong-che-tu-xa",
+    "name": "Súng bắn điện khống chế từ xa",
+    "sourceImageSpecFolder": "ASP Tech\\PhaZZer LLC\\Thiết bị bắn điện khống chế (CEW)\\PhaZZer Enforcer"
+  },
+  {
+    "id": "cmra1agzm004ehsuky0vkh330",
+    "slug": "thiet-bi-bay-khong-nguoi-lai-chuyen-dung-cho-moi-truong-hang-hai",
+    "name": "Thiết bị bay không người lái chuyên dụng cho môi trường hàng hải",
+    "sourceImageSpecFolder": "AVTEK\\DIODON\\UAV\\DIODON HP30 Mark 2"
+  },
+  {
+    "id": "cmra1ah1z004whsukuxp84q6m",
+    "slug": "thiet-bi-bay-da-canh-quat-da-nhiem-hoat-dong-moi-thoi-tiet",
+    "name": "Thiết bị bay đa cánh quạt đa nhiệm hoạt động mọi thời tiết",
+    "sourceImageSpecFolder": "HTI\\WaveAerospace, Inc\\UAS đa cánh quạt hoạt động mọi thời tiết\\Falcon II LE"
+  },
+  {
+    "id": "cmra1ah7k005zhsukoq11w6ml",
+    "slug": "thiet-bi-cam-tay-phat-hien-dau-hieu-su-song",
+    "name": "Thiết bị cầm tay phát hiện dấu hiệu sự sống",
+    "sourceImageSpecFolder": "ASP Tech\\SpecOps\\Thiết bị phát hiện sự sống\\Cyclops ID"
+  },
+  {
+    "id": "cmra1agnp002hhsuken58r5sz",
+    "slug": "thiet-bi-cam-tay-phat-hien-va-dinh-vi-thiet-bi-bay-bang-tin-hieu-vo-tuyen",
+    "name": "Thiết bị cầm tay phát hiện và định vị thiết bị bay bằng tín hiệu vô tuyến",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BR019"
+  },
+  {
+    "id": "cmra1agsq0035hsukqzis33g8",
+    "slug": "thiet-bi-cam-tay-phat-hien-va-doi-khang-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Thiết bị cầm tay phát hiện và đối kháng thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BD003"
+  },
+  {
+    "id": "cmra1ahh0007nhsukbr148d17",
+    "slug": "thiet-bi-ghi-hinh-ky-thuat-so-cho-giam-sat-bi-mat",
+    "name": "Thiết bị ghi hình kỹ thuật số cho giám sát bí mật",
+    "sourceImageSpecFolder": "AVTEK\\Covidence AS\\CCTV\\Oculus 5"
+  },
+  {
+    "id": "cmra1agi1001qhsuk1od45o8k",
+    "slug": "thiet-bi-ghi-nhat-ky-dinh-vi-thu-nho",
+    "name": "Thiết bị ghi nhật ký định vị thu nhỏ",
+    "sourceImageSpecFolder": "AVTEK\\Gedion Ltd.\\Thiết bị ghi nhật ký định vị GPS\\Sha-Ked GPS Logger"
+  },
+  {
+    "id": "cmra1ahj6007zhsukxi6a583e",
+    "slug": "thiet-bi-ghi-am-bi-mat-sieu-nho-hinh-vien-keo",
+    "name": "Thiết bị ghi âm bí mật siêu nhỏ hình viên kẹo",
+    "sourceImageSpecFolder": "AVTEK\\Covidence AS\\Ghi âm bí mật viên kẹo\\Audius Bubble Gum"
+  },
+  {
+    "id": "cmra1ahpm0092hsuknbnsc78b",
+    "slug": "thiet-bi-giam-sat-am-thanh-tu-xa-bang-laser-qua-be-mat-cac-loai-vat-lieu",
+    "name": "Thiết bị giám sát âm thanh từ xa bằng laser qua bề mặt các loại vật liệu",
+    "sourceImageSpecFolder": "HTI\\KBR Labs Pte. Ltd.\\Thiết bị giám sát âm thanh từ xa\\XCOUSTIC X2"
+  },
+  {
+    "id": "cmra1agt90038hsukfkvodxu6",
+    "slug": "thiet-bi-gay-nhieu-thiet-bi-bay-khong-nguoi-lai-cam-tay",
+    "name": "Thiết bị gây nhiễu thiết bị bay không người lái cầm tay",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BD004"
+  },
+  {
+    "id": "cmra1agpv002qhsukllfrvzsb",
+    "slug": "thiet-bi-gay-nhieu-toan-huong-chong-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Thiết bị gây nhiễu toàn hướng chống thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BO004"
+  },
+  {
+    "id": "cmra1agxy0042hsuko7lv58ft",
+    "slug": "thiet-bi-gay-nhieu-tin-hieu-dung-kien-truc-vo-tuyen-dinh-nghia-bang-phan-mem",
+    "name": "Thiết bị gây nhiễu tín hiệu dùng kiến trúc vô tuyến định nghĩa bằng phần mềm",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Jamming\\HJ300 HJ800"
+  },
+  {
+    "id": "cmra1agoc002khsuk9n6i4jgu",
+    "slug": "thiet-bi-gay-nhieu-dinh-huong-chong-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Thiết bị gây nhiễu định hướng chống thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BD002"
+  },
+  {
+    "id": "cmra1agp8002nhsuktzqrozpf",
+    "slug": "thiet-bi-gay-nhieu-dinh-huong-toan-bang-tan",
+    "name": "Thiết bị gây nhiễu định hướng toàn băng tần",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BD008"
+  },
+  {
+    "id": "cmra1ai4000behsukposyjztr",
+    "slug": "thiet-bi-khong-che-bang-nang-luong-dien",
+    "name": "Thiết bị khống chế bằng năng lượng điện",
+    "sourceImageSpecFolder": "ASP Tech\\HUSHA\\Thiết bị bắn điện khống chế (CEW)\\TX200P"
+  },
+  {
+    "id": "cmra1ai2600b2hsukek8fgcbq",
+    "slug": "thiet-bi-khu-man-cam-tay-van-hanh-bang-tay",
+    "name": "Thiết bị khử mặn cầm tay vận hành bằng tay",
+    "sourceImageSpecFolder": "AVTEK\\Katadyn Products Inc.\\Thiết bị lọc nước - khử mặn sinh tồn\\KATADYN SURVIVOR"
+  },
+  {
+    "id": "cmra1ahu2009qhsukgcppxjzi",
+    "slug": "thiet-bi-kiem-tra-nhanh-dau-vet-chat-nguy-hiem",
+    "name": "Thiết bị kiểm tra nhanh dấu vết chất nguy hiểm",
+    "sourceImageSpecFolder": "ASP Tech\\DetectaChem\\Thiết bị phân tích cầm tay\\SEEKER Pro"
+  },
+  {
+    "id": "cmra1ahf4007bhsuky7q04rao",
+    "slug": "thiet-bi-kich-hoat-am-hoc-duoi-nuoc",
+    "name": "Thiết bị kích hoạt âm học dưới nước",
+    "sourceImageSpecFolder": "AVTEK\\RTSys\\Thiết bị âm học dưới nước\\SONABLOW"
+  },
+  {
+    "id": "cmra1ahq70095hsukzhswbkks",
+    "slug": "thiet-bi-luu-tru-va-truyen-du-lieu-am-thanh-hinh-anh-qua-mang-di-dong",
+    "name": "Thiết bị lưu trữ và truyền dữ liệu âm thanh, hình ảnh qua mạng di động",
+    "sourceImageSpecFolder": "HTI\\Innova S.p.A.\\Thiết bị lưu trữ ghi âm ghi hình và truyền dữ liệu qua mạng di động\\RM400  RM320"
+  },
+  {
+    "id": "cmra1ahkd0085hsuk3366yduf",
+    "slug": "thiet-bi-nghe-chon-loc-di-dong-co-lon",
+    "name": "Thiết bị nghe chọn lọc di động cỡ lớn",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE SE30X"
+  },
+  {
+    "id": "cmra1ahkw0088hsukbst69ya6",
+    "slug": "thiet-bi-nghe-chon-loc-di-dong-nguy-trang-co-nho",
+    "name": "Thiết bị nghe chọn lọc di động ngụy trang cỡ nhỏ",
+    "sourceImageSpecFolder": "AVTEK\\RCS S.p.A.\\Thiết bị nghe chọn lọc\\SONICEYE SE01"
+  },
+  {
+    "id": "cmra1agyc0045hsuk159tbyic",
+    "slug": "thiet-bi-phat-hien-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Thiết bị phát hiện thiết bị bay không người lái",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Jamming\\SKYTRACER SKYTRACER-S"
+  },
+  {
+    "id": "cmra1agmg002bhsuk995mu7af",
+    "slug": "thiet-bi-phat-hien-tin-hieu-vo-tuyen-cua-thiet-bi-bay",
+    "name": "Thiết bị phát hiện tín hiệu vô tuyến của thiết bị bay",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BR002"
+  },
+  {
+    "id": "cmra1ahws00a5hsuk1qluogd1",
+    "slug": "thiet-bi-phat-hien-vet-thuoc-no",
+    "name": "Thiết bị phát hiện vết thuốc nổ",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Forensic\\ETD-500"
+  },
+  {
+    "id": "cmra1ai2z00b8hsukpyokma3k",
+    "slug": "thiet-bi-quan-sat-ngay-dem-va-ngam-ban-goc-khuat",
+    "name": "Thiết bị quan sát ngày đêm và ngắm bắn góc khuất",
+    "sourceImageSpecFolder": "HTC\\IFORCE TECHNOLOGY LLC\\Thiết bị quan sát ngày đêm và ngắm bắn góc khuất\\IF-M15"
+  },
+  {
+    "id": "cmra1ahzf00akhsukq6t3mrvn",
+    "slug": "thiet-bi-quan-sat-don-mat-da-chuc-nang-sieu-nhe",
+    "name": "Thiết bị quan sát đơn mắt đa chức năng siêu nhẹ",
+    "sourceImageSpecFolder": "AVTEK\\ELYNXO\\Ống nhòm\\VIRTUOSE"
+  },
+  {
+    "id": "cmra1ahxa00a8hsuklug6msd7",
+    "slug": "thiet-bi-soi-x-ray-cam-tay-tan-xa-nguoc",
+    "name": "Thiết bị soi X-ray cầm tay tán xạ ngược",
+    "sourceImageSpecFolder": "HTI\\Videray\\Thiết bị soi chiếu X-ray cầm tay tán xạ ngược\\PX Ultra"
+  },
+  {
+    "id": "cmra1ahxz00abhsukjvoqg6a6",
+    "slug": "thiet-bi-tho-tuan-hoan-quan-su-da-che-do",
+    "name": "Thiết bị thở tuần hoàn quân sự đa chế độ",
+    "sourceImageSpecFolder": "AVTEK\\OPENSAFETY\\Máy thở dưới nước\\Incursion CMR"
+  },
+  {
+    "id": "cmra1aho2008thsuklxzvd645",
+    "slug": "thiet-bi-truyen-am-thanh-video-chien-thuat",
+    "name": "Thiết bị truyền âm thanh/video chiến thuật",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Video Transmission\\Transmission"
+  },
+  {
+    "id": "cmra1agqi002thsuk57i5eekn",
+    "slug": "thiet-bi-danh-lua-dinh-vi-thiet-bi-bay-khong-nguoi-lai",
+    "name": "Thiết bị đánh lừa định vị thiết bị bay không người lái",
+    "sourceImageSpecFolder": "NovoQuad_VN\\NovoQuad_Group\\ND-BG002"
+  },
+  {
+    "id": "cmra1agjg001whsukxx6qh545",
+    "slug": "thiet-bi-dinh-vi-gps-dung-pin-dung-luong-lon",
+    "name": "Thiết bị định vị GPS dùng pin dung lượng lớn",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Tracking\\L-TRACK"
+  },
+  {
+    "id": "cmra1agkl0022hsukow6zkl4m",
+    "slug": "thiet-bi-dinh-vi-gps-nho-gon",
+    "name": "Thiết bị định vị GPS nhỏ gọn",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Tracking\\S-TRACK"
+  },
+  {
+    "id": "cmra1agk1001zhsukuxn9kzvz",
+    "slug": "thiet-bi-dinh-vi-gan-nam-cham-da-che-do",
+    "name": "Thiết bị định vị gắn nam châm đa chế độ",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Tracking\\M-TRACK"
+  },
+  {
+    "id": "cmra1agit001thsuk20fp69n2",
+    "slug": "thiet-bi-dinh-vi-nguy-trang-dang-op-pin-dien-thoai",
+    "name": "Thiết bị định vị ngụy trang dạng ốp pin điện thoại",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Tracking\\IPX-PROTRAK"
+  },
+  {
+    "id": "cmra1ahjt0082hsuk2kclwzpk",
+    "slug": "the-ghi-am-dinh-vi-va-truyen-du-lieu-nguy-trang-dang-the-id",
+    "name": "Thẻ ghi âm, định vị và truyền dữ liệu ngụy trang dạng thẻ ID",
+    "sourceImageSpecFolder": "AVTEK\\Gedion Ltd.\\Thiết bị nghe ghi âm định vị bí mật\\Sha-Ked ID card"
+  },
+  {
+    "id": "cmra1ahno008qhsuki1iyyad3",
+    "slug": "vo-nguy-trang-tich-hop-camera",
+    "name": "Vỏ ngụy trang tích hợp camera",
+    "sourceImageSpecFolder": "AVTEK\\Covidence AS\\CCTV\\Concealment"
+  },
+  {
+    "id": "cmra1ahyl00aehsukry3sniez",
+    "slug": "ao-chien-thuat-tich-hop-bo-mang-giap-danh-cho-tho-lan",
+    "name": "Áo chiến thuật tích hợp bộ mang giáp dành cho thợ lặn",
+    "sourceImageSpecFolder": "AVTEK\\OPENSAFETY\\Trang bị chiến thuật và bảo hộ cho thợ lặn\\IMIL-TVEST"
+  },
+  {
+    "id": "cmra1ai3f00bbhsukm0wewq6w",
+    "slug": "ao-giap-chien-thuat-chong-dan",
+    "name": "Áo giáp chiến thuật chống đạn",
+    "sourceImageSpecFolder": "AVTEK\\Silverback\\Áo giáp chiến thuật chống đạn\\DKP777"
+  },
+  {
+    "id": "cmra1ahsx009khsuklrrwsu5i",
+    "slug": "dau-ghi-va-truyen-phat-video-hd-da-kenh-ket-noi-5g-dang-thu-nho",
+    "name": "Đầu ghi và truyền phát video HD đa kênh kết nối 5G dạng thu nhỏ",
+    "sourceImageSpecFolder": "HTI\\Ovation Systems Ltd\\Đầu ghi video kỹ thuật số và bộ truyền phát video HD đa kênh\\FB5G-6173 FB5G-7247"
+  },
+  {
+    "id": "cmra1ahna008nhsukhmm4lo6e",
+    "slug": "ong-nghe-xuyen-tuong-khong-day-am-thanh-noi",
+    "name": "Ống nghe xuyên tường không dây âm thanh nổi",
+    "sourceImageSpecFolder": "AVTEK\\Secupro Government BV\\Ống nghe xuyên tường\\Wireless Stereo Stethoscope II"
+  },
+  {
+    "id": "cmra1ai2l00b5hsukj3zybky8",
+    "slug": "ong-nhom-da-cam-bien",
+    "name": "Ống nhòm đa cảm biến",
+    "sourceImageSpecFolder": "HTC\\INNOS Technologies Inc.\\Surveillance\\HELIOS LUNAR"
+  },
+  {
+    "id": "cmra1ah4e005ehsuko48yxigt",
+    "slug": "ung-dung-hop-va-hoi-nghi-truc-tuyen-bao-mat",
+    "name": "Ứng dụng họp và hội nghị trực tuyến bảo mật",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\TriMeet"
+  },
+  {
+    "id": "cmra1ah56005khsukdg4k7sy4",
+    "slug": "ung-dung-luu-tru-va-chia-se-du-lieu-bao-mat",
+    "name": "Ứng dụng lưu trữ và chia sẻ dữ liệu bảo mật",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\TriDrive"
+  },
+  {
+    "id": "cmra1ah41005bhsukscnidphm",
+    "slug": "ung-dung-trao-doi-cong-viec-truc-tuyen-an-toan",
+    "name": "Ứng dụng trao đổi công việc trực tuyến an toàn",
+    "sourceImageSpecFolder": "ASP Tech\\bGlobal\\Nền tảng Trios\\Trios Messenger"
+  }
+]
