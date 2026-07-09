@@ -10,14 +10,13 @@ RUN pnpm install --frozen-lockfile
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# DATABASE_URL is required for prisma generate during build
-# Pass it as build argument: docker build --build-arg DATABASE_URL="your_db_url" .
+# DATABASE_URL is optional during build
 ARG DATABASE_URL=""
-RUN if [ -z "$DATABASE_URL" ]; then \
-      echo "WARNING: DATABASE_URL not provided. Skipping Prisma generate."; \
-      echo "If you need database-dependent code generation, provide DATABASE_URL."; \
-    else \
+RUN if [ -n "$DATABASE_URL" ]; then \
+      echo "DATABASE_URL provided, generating Prisma client..."; \
       pnpm db:generate; \
+    else \
+      echo "DATABASE_URL not provided, skipping Prisma generate at build time"; \
     fi
 RUN pnpm build
 
@@ -41,4 +40,5 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 USER nextjs
 EXPOSE 3000
 
-CMD ["sh", "-c", "pnpm prisma migrate deploy && node server.js"]
+# Only run migrations if DATABASE_URL is provided, otherwise just start the app
+CMD ["sh", "-c", "if [ -z \"$DATABASE_URL\" ]; then echo 'WARNING: DATABASE_URL not set, skipping migrations'; node server.js; else echo 'Running migrations...'; pnpm prisma migrate deploy && node server.js; fi"]
