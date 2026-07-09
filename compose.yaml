@@ -5,16 +5,16 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        DATABASE_URL: ${DATABASE_URL:-postgresql://user_e74cf4f8c46e:pTwGgMiD4th6JuEzO00OCoYPm0aIAGWx@tinhgon.xyz:30041/asptech?schema=public}
+        DATABASE_URL: ${DATABASE_URL}
     environment:
       NODE_ENV: production
       PORT: 3000
-      DATABASE_URL: ${DATABASE_URL:-postgresql://user_e74cf4f8c46e:pTwGgMiD4th6JuEzO00OCoYPm0aIAGWx@tinhgon.xyz:30041/asptech?schema=public}
-      AUTH_SECRET: ${AUTH_SECRET:-generate-a-long-random-secret}
+      DATABASE_URL: ${DATABASE_URL}
+      AUTH_SECRET: ${AUTH_SECRET}
       AUTH_TRUST_HOST: "true"
-      AUTH_GOOGLE_ID: ${AUTH_GOOGLE_ID:-}
-      AUTH_GOOGLE_SECRET: ${AUTH_GOOGLE_SECRET:-}
-      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+      AUTH_GOOGLE_ID: ${AUTH_GOOGLE_ID}
+      AUTH_GOOGLE_SECRET: ${AUTH_GOOGLE_SECRET}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
     ports: ["${APP_PORT:-3001}:3000"]
     depends_on:
       minio:
@@ -25,7 +25,7 @@ services:
     environment:
       POSTGRES_DB: asptech
       POSTGRES_USER: asptech
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes: ["postgres_data:/var/lib/postgresql/data"]
     ports: ["127.0.0.1:5432:5432"]
     healthcheck:
@@ -37,8 +37,8 @@ services:
     image: minio/minio:latest
     command: server /data --console-address ":9001"
     environment:
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-asptech}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-change-this-password}
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
     volumes: ["minio_data:/data"]
     ports: ["127.0.0.1:9000:9000", "127.0.0.1:9001:9001"]
 volumes:
