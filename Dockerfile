@@ -10,7 +10,9 @@ RUN pnpm install --frozen-lockfile
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV DATABASE_URL="postgresql://asptech:change-me@localhost:5432/asptech?schema=public"
+# DATABASE_URL is required for prisma generate - pass it at build time if needed
+# For CI/CD: docker build --build-arg DATABASE_URL="..." .
+ARG DATABASE_URL=postgresql://asptech:change-me@localhost:5432/asptech?schema=public
 RUN pnpm db:generate
 RUN pnpm build
 
