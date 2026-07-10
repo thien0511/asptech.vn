@@ -33,6 +33,7 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=deps /app/node_modules ./node_modules
 COPY package.json pnpm-lock.yaml* pnpm-workspace.yaml* ./
 COPY prisma ./prisma
+COPY prisma.config.ts ./
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
