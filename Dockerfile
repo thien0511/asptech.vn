@@ -27,6 +27,7 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=deps /app/node_modules ./node_modules
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml prisma.config.ts ./
 COPY prisma ./prisma
+COPY --from=builder /app/src/generated ./src/generated
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
@@ -34,4 +35,4 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 USER nextjs
 EXPOSE 3000
 
-CMD ["sh", "-c", "pnpm prisma migrate deploy && node server.js"]
+CMD ["sh", "-c", "pnpm prisma migrate deploy && pnpm db:bootstrap && node server.js"]

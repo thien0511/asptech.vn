@@ -1,13 +1,18 @@
 ﻿import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient, ContentStatus, Visibility } from "../src/generated/prisma/client";
+import { ContentStatus, PrismaClient, Visibility } from "../src/generated/prisma/client";
 
 type ProductImportRow = {
   name: string;
   description: string;
   contactPerson?: string;
   groupName: string;
+};
+
+type ProductMediaSourceRow = {
+  id: string;
+  name: string;
 };
 
 const databaseUrl = process.env.DATABASE_URL;
@@ -43,6 +48,7 @@ async function uniqueSlug(base: string, existingProductId?: string) {
 async function main() {
   const raw = await readFile(new URL("./products-import.json", import.meta.url), "utf-8");
   const rows = JSON.parse(raw) as ProductImportRow[];
+  const productIdsByName = await readProductIdsByName();
 
   let created = 0;
   let updated = 0;
@@ -55,31 +61,42 @@ async function main() {
       create: { name: row.groupName, slug: groupSlug },
     });
 
-    const existing = await prisma.product.findFirst({
-      where: {
-        name: row.name,
-        groupId: group.id,
-      },
-      select: { id: true },
-    });
+    const sourceProductId = productIdsByName.get(row.name);
+    const existingById = sourceProductId
+      ? await prisma.product.findUnique({ where: { id: sourceProductId }, select: { id: true } })
+      : null;
+    const existing =
+      existingById ??
+      (await prisma.product.findFirst({
+        where: {
+          name: row.name,
+          groupId: group.id,
+        },
+        select: { id: true },
+      }));
 
     const slug = await uniqueSlug(slugify(row.name), existing?.id);
-    const data = {
+    const baseData = {
       slug,
       name: row.name,
       description: row.description,
       contactPerson: row.contactPerson?.trim() || null,
-      status: ContentStatus.DRAFT,
-      visibility: Visibility.INTERNAL,
-      featured: false,
       groupId: group.id,
     };
 
     if (existing) {
-      await prisma.product.update({ where: { id: existing.id }, data });
+      await prisma.product.update({ where: { id: existing.id }, data: baseData });
       updated += 1;
     } else {
-      await prisma.product.create({ data });
+      await prisma.product.create({
+        data: {
+          id: sourceProductId,
+          ...baseData,
+          status: ContentStatus.DRAFT,
+          visibility: Visibility.INTERNAL,
+          featured: false,
+        },
+      });
       created += 1;
     }
   }
@@ -94,6 +111,39 @@ async function main() {
   });
 
   console.log(JSON.stringify({ rows: rows.length, created, updated }, null, 2));
+}
+
+async function readProductIdsByName() {
+  try {
+    const raw = await readSeedDataFile("product-media-source.json");
+    const rows = JSON.parse(raw) as ProductMediaSourceRow[];
+    const map = new Map<string, string>();
+    const duplicates = new Set<string>();
+
+    for (const row of rows) {
+      if (map.has(row.name)) duplicates.add(row.name);
+      map.set(row.name, row.id);
+    }
+    for (const name of duplicates) map.delete(name);
+
+    return map;
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return new Map<string, string>();
+    }
+    throw error;
+  }
+}
+
+async function readSeedDataFile(fileName: string) {
+  try {
+    return await readFile(new URL(`./seed-data/${fileName}`, import.meta.url), "utf-8");
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return await readFile(new URL(`./.tmp/${fileName}`, import.meta.url), "utf-8");
+    }
+    throw error;
+  }
 }
 
 main()
