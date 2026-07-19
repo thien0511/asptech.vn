@@ -74,6 +74,12 @@ export default async function ProductsPage({ searchParams }: { searchParams: Sea
             {session?.user ? (
               <div className="flex items-center gap-3 text-sm">
                 <span className="hidden max-w-56 truncate text-slate-500 sm:inline">{session.user.name ?? session.user.email}</span>
+                <Link href="/" className="rounded-lg border border-slate-300 px-3 py-1.5 font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-700">
+                  Trang chủ
+                </Link>
+                <Link href="/tai-khoan/doi-mat-khau" className="rounded-lg border border-slate-300 px-3 py-1.5 font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-700">
+                  Đổi mật khẩu
+                </Link>
                 <SignOutButton className="rounded-lg border border-slate-300 px-3 py-1.5 font-semibold text-slate-700 hover:bg-slate-50 hover:text-red-700" />
               </div>
             ) : (
@@ -122,7 +128,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Sea
                     src={product.assets[0].storageKey}
                     alt={product.name}
                     fill
-                    loading={index === 0 ? "eager" : "lazy"}
+                    {...(index === 0 ? { priority: true } : { loading: "lazy" as const })}
                     sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-contain p-4"
                   />

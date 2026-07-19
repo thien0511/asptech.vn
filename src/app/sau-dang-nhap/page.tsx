@@ -8,5 +8,9 @@ export default async function AfterSignInPage() {
     redirect("/dang-nhap");
   }
 
+  if (session.user.mustChangePassword) {
+    redirect("/tai-khoan/doi-mat-khau");
+  }
+
   redirect(defaultSignedInPath(session.user.role));
 }

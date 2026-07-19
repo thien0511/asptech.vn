@@ -301,13 +301,8 @@ export default async function HomePage() {
                 <dd className="text-slate-600">Email: info@asptech.vn</dd>
               </div>
               <div>
-                <dt className="font-semibold text-slate-900">Văn phòng TP. Hồ Chí Minh</dt>
-                <dd className="mt-1 text-slate-600">Số 50 Lê Thị Riêng, Quận 1, TP. Hồ Chí Minh</dd>
-                <dd className="text-slate-600">Email: hcm@asptech.vn</dd>
-              </div>
-              <div>
                 <dt className="font-semibold text-slate-900">Website</dt>
-                <dd className="mt-1 text-slate-600">www.asptech.vn</dd>
+                <dd className="mt-1 text-slate-600">https://asptech.vn</dd>
               </div>
             </dl>
           </div>

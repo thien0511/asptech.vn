@@ -33,6 +33,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                   </Link>
                 </>
               ) : null}
+              <Link href="/" className="font-medium text-slate-700 hover:text-blue-700">
+                Trang chủ
+              </Link>
+              <Link href="/tai-khoan/doi-mat-khau" className="font-medium text-slate-700 hover:text-blue-700">
+                Đổi mật khẩu
+              </Link>
               <SignOutButton className="font-medium text-slate-700 hover:text-red-700" />
             </nav>
           </div>

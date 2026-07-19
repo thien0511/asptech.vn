@@ -7,9 +7,18 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { UserStatus } from "@/generated/prisma/client";
 
+const SESSION_MAX_AGE_SECONDS = 60 * 60;
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
-  session: { strategy: "jwt" },
+  session: {
+    strategy: "jwt",
+    maxAge: SESSION_MAX_AGE_SECONDS,
+    updateAge: 0,
+  },
+  jwt: {
+    maxAge: SESSION_MAX_AGE_SECONDS,
+  },
   pages: { signIn: "/dang-nhap" },
   providers: [
     Google({ allowDangerousEmailAccountLinking: false }),

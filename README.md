@@ -16,6 +16,22 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Email configuration
+
+Customer registration generates a temporary password and sends it by SMTP before the user is created in the database.
+Set these environment variables in the runtime environment:
+
+```bash
+SMTP_HOST="smtp.example.com"
+SMTP_PORT=587
+SMTP_USER="no-reply@example.com"
+SMTP_PASSWORD="smtp-password"
+SMTP_FROM="no-reply@example.com"
+SMTP_SECURE="false"
+```
+
+Use `SMTP_SECURE="true"` for implicit TLS, usually port 465. Port 587 uses STARTTLS.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
